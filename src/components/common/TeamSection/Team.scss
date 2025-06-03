@@ -1,0 +1,51 @@
+.team-wrapper {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  .common-heading {
+    text-align: center;
+  }
+  .tabs-btn {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    button {
+      text-align: left;
+      background: transparent;
+      color: #2d2d2e;
+      font-size: 14px;
+      font-weight: 400;
+      position: relative;
+      border: none;
+      &.active {
+        color: #fda704;
+        font-weight: 700;
+        &::after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #fda704;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    button {
+      background: #0e53e2;
+      color: white;
+      font-size: 14px;
+      border-radius: 10px;
+      border: none;
+      padding: 10px 25px;
+      min-width: 150px;
+    }
+  }
+}

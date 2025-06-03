@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import type { Swiper as SwiperType } from "swiper";
 import { Navigation } from "swiper/modules";
 import "./PressRelease.scss";
 import { ArrowLeftIcon, ArrowRightIcon, ArrowRightLongIcon } from "@/svgs";
@@ -73,10 +74,13 @@ const PressReleaseSection = () => {
             prevEl: prevRef.current,
             nextEl: nextRef.current,
           }}
-          onBeforeInit={(swiper) => {
-            if (swiper.params.navigation) {
-              (swiper.params.navigation as any).prevEl = prevRef.current;
-              (swiper.params.navigation as any).nextEl = nextRef.current;
+          onBeforeInit={(swiper: SwiperType) => {
+            if (
+              typeof swiper.params.navigation !== "boolean" &&
+              swiper.params.navigation
+            ) {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
             }
           }}
           spaceBetween={20}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { CoreIcon } from "@/svgs";
+import "./CoreValue.scss";
 const tabData = [
   {
     title: "Accountability",
@@ -39,8 +40,8 @@ const CoreValueSection = () => {
       <div className="content-overlay">
         <div className="content-col ">
           <div className="image-layer-col">
-            <img className="layer-one" src="/images/banner-1.jpg" alt="img" />
-            <img className="layer-two" src="/images/banner-1.jpg" alt="img" />
+            <img className="layer-one" src="/images/core-1.jpg" alt="img" />
+            <img className="layer-two" src="/images/core-2.jpg" alt="img" />
           </div>
         </div>
         <div className="content-col">
