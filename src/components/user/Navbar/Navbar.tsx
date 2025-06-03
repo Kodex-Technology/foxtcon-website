@@ -43,7 +43,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="btn-wrapper">
-          <button>Sign In</button>
+          <button className="btn-style503">Sign In</button>
         </div>
       </div>
     </div>

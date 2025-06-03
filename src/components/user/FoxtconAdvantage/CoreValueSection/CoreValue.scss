@@ -60,7 +60,9 @@
               font-weight: 400;
               position: relative;
               border: none;
-              &.active {
+
+              &.active,
+              &:hover {
                 color: #fda704;
                 font-weight: 700;
                 &::after {

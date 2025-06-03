@@ -19,14 +19,24 @@
         }
       }
     }
+
     .btn-wrapper {
       button {
-        background: #0e53e2;
-        color: white;
-        font-size: 14px;
+        background: transparent;
+        border-color: #0e53e2;
+        color: #0e53e2;
+        transition: all 0.5s;
+        border: 1px solid #0e53e2;
+        padding: 8px 15px;
         border-radius: 10px;
-        border: none;
-        padding: 10px 15px;
+        font-size: 14px;
+        overflow: hidden;
+        &:hover {
+          box-shadow: inset 10em 0 0 0 #0e53e2, inset -10em 0 0 0 #0e53e2;
+          border-color: #0e53e2;
+          color: white;
+          border: 1px solid #0e53e2;
+        }
       }
     }
     .center-img {

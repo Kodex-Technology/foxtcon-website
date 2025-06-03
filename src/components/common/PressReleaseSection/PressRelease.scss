@@ -120,8 +120,13 @@
       white-space: nowrap;
       align-items: center;
       gap: 5px;
+      width: fit-content;
+      border-bottom: 1px solid transparent;
       svg {
         width: 16px;
+      }
+      &:hover {
+        border-bottom: 1px solid #fda704;
       }
     }
   }

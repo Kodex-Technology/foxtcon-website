@@ -17,20 +17,16 @@
       color: #2d2d2e;
       font-size: 14px;
       font-weight: 400;
-      position: relative;
       border: none;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        color: #fda704;
+        border-bottom: 1px solid #fda704;
+      }
       &.active {
         color: #fda704;
         font-weight: 700;
-        &::after {
-          content: "";
-          width: 100%;
-          height: 1px;
-          background: #fda704;
-          position: absolute;
-          bottom: 0;
-          left: 0;
-        }
+        border-bottom: 1px solid #fda704;
       }
     }
   }
@@ -39,13 +35,22 @@
     justify-content: center;
     padding-top: 1.5rem;
     button {
-      background: #0e53e2;
-      color: white;
-      font-size: 14px;
+      background: transparent;
+      border-color: #0e53e2;
+      color: #0e53e2;
+      transition: all 0.5s;
+      border: 1px solid #0e53e2;
+      padding: 8px 15px;
       border-radius: 10px;
-      border: none;
-      padding: 10px 25px;
+      font-size: 14px;
+      overflow: hidden;
       min-width: 150px;
+      &:hover {
+        box-shadow: inset 10em 0 0 0 #0e53e2, inset -10em 0 0 0 #0e53e2;
+        border-color: #0e53e2;
+        color: white;
+        border: 1px solid #0e53e2;
+      }
     }
   }
 }

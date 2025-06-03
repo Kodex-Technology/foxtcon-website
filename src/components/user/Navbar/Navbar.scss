@@ -38,6 +38,11 @@
               font-weight: 700;
             }
           }
+          &:hover {
+            a {
+              color: #fda704;
+            }
+          }
           a {
             color: white;
             font-size: 16px;
@@ -48,13 +53,22 @@
     }
     .btn-wrapper {
       button {
-        background: #0e53e2;
+        background: transparent;
+        border-color: white;
         color: white;
-        font-size: 14px;
+        transition: all 0.5s;
+        border: 1px solid white;
+        min-width: 120px;
+        padding: 8px 15px;
         border-radius: 10px;
-        height: 40px;
-        width: 120px;
-        border: none;
+        font-size: 14px;
+        overflow: hidden;
+        &:hover {
+          box-shadow: inset 5em 0 0 0 #0e53e2, inset -5em 0 0 0 #0e53e2;
+          border-color: #0e53e2;
+          color: white;
+          border: 1px solid #0e53e2;
+        }
       }
     }
   }
