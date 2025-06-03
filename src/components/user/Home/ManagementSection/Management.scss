@@ -1,0 +1,65 @@
+.management-wrapper {
+  display: flex;
+  gap: 30px;
+  padding-top: 3rem;
+  align-items: center;
+  .management-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    .description {
+      p {
+        color: #555555;
+        font-size: 14px;
+        font-weight: 500;
+        a {
+          color: #fda30f;
+          font-size: 12px;
+        }
+      }
+    }
+    .btn-wrapper {
+      button {
+        background: #0e53e2;
+        color: white;
+        font-size: 14px;
+        border-radius: 10px;
+        border: none;
+        padding: 10px 15px;
+      }
+    }
+    .center-img {
+      padding: 1rem;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        object-fit: cover;
+      }
+    }
+    .hotel-content {
+      .content-row {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        svg {
+          width: 70px;
+        }
+        h2 {
+          color: #2d2d2e;
+          font-size: 24px;
+          font-weight: 700;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          span {
+            color: #555555;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}

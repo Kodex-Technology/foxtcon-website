@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import "./PortfolioCard.scss";
 interface PortfolioCardProps {
   image: string;
   title: string;
@@ -16,7 +16,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
 }) => {
   return (
     <div className="portfolio-card">
-      <Image src={image} alt={title} width={100} height={100} />
+      <img src={image} alt={title} />
       <div className="content-overlay">
         <div className="content-header">
           <h3>{title}</h3>
