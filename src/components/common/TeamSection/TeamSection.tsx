@@ -4,7 +4,7 @@ import TeamCard from "../TeamCard/TeamCard";
 const teamData = [
   {
     name: "Kellie Rolfson",
-    title: "Principal Interactions Engineer",
+    title: "Principal Interactions Engineer ",
     image: "/images/profile-1.jpg",
     category: "Senior Leadership",
   },
@@ -140,7 +140,7 @@ const TeamSection = () => {
         <div className="row mt-4">
           {visibleTeam.map((member, index) => (
             <div className="col-md-4 mb-4" key={index}>
-              <TeamCard member={member} />
+              <TeamCard member={member} showIcon={true} />
             </div>
           ))}
         </div>
