@@ -1,0 +1,133 @@
+.press-release-wrapper {
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  .common-heading {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
+// custom-swiper
+.custom-swiper {
+  .swiper-wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .swiper-slide {
+    height: auto !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: #fda704;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+      content: "";
+    }
+  }
+  .swiper-button-prev {
+    left: 10px;
+    top: 125px;
+    &.custom-icon {
+      svg {
+        width: 18px;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    right: 10px;
+    top: 125px;
+    &.custom-icon {
+      svg {
+        width: 18px;
+      }
+    }
+  }
+}
+//slider-card
+.slider-card {
+  height: 100%;
+  .image-wrapper {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    img {
+      width: 100%;
+      height: 250px;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+  }
+  .content-overlay {
+    border-radius: 15px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+      rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: -100px;
+    height: calc(100% - 150px);
+    position: relative;
+    z-index: 2;
+    justify-content: space-between;
+    .content-detail {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      h1 {
+        color: #2d2d2e;
+        font-size: 20px;
+        font-weight: 700;
+      }
+      .separator-line {
+        border: 1px dashed #dadada;
+        width: 100%;
+      }
+      p {
+        color: #555555;
+        font-size: 16px;
+      }
+    }
+
+    button {
+      background: transparent;
+      border: none;
+      color: #fda704;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      white-space: nowrap;
+      align-items: center;
+      gap: 5px;
+      width: fit-content;
+      border-bottom: 1px solid transparent;
+      svg {
+        width: 16px;
+      }
+      &:hover {
+        border-bottom: 1px solid #fda704;
+      }
+    }
+  }
+}

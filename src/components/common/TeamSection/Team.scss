@@ -1,0 +1,56 @@
+.team-wrapper {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  .common-heading {
+    text-align: center;
+  }
+  .tabs-btn {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    button {
+      text-align: left;
+      background: transparent;
+      color: #2d2d2e;
+      font-size: 14px;
+      font-weight: 400;
+      border: none;
+      border-bottom: 1px solid transparent;
+      &:hover {
+        color: #fda704;
+        border-bottom: 1px solid #fda704;
+      }
+      &.active {
+        color: #fda704;
+        font-weight: 700;
+        border-bottom: 1px solid #fda704;
+      }
+    }
+  }
+  .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 1.5rem;
+    button {
+      background: transparent;
+      border-color: #0e53e2;
+      color: #0e53e2;
+      transition: all 0.5s;
+      border: 1px solid #0e53e2;
+      padding: 8px 15px;
+      border-radius: 10px;
+      font-size: 14px;
+      overflow: hidden;
+      min-width: 150px;
+      &:hover {
+        box-shadow: inset 10em 0 0 0 #0e53e2, inset -10em 0 0 0 #0e53e2;
+        border-color: #0e53e2;
+        color: white;
+        border: 1px solid #0e53e2;
+      }
+    }
+  }
+}

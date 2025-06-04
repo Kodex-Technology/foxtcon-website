@@ -1,0 +1,31 @@
+@use "./variables.scss" as *;
+// Mobile-576px
+@mixin mobile() {
+  @media only screen and (max-width: $breakpoint-sm) {
+    @content;
+  }
+}
+// Tablet-767px
+@mixin tablet() {
+  @media only screen and (max-width: $breakpoint-md) {
+    @content;
+  }
+}
+// Desktop-991px
+@mixin desktop() {
+  @media only screen and (max-width: $breakpoint-lg) {
+    @content;
+  }
+}
+// Desktop-xl-1199px
+@mixin desktop-xl() {
+  @media only screen and (max-width: $breakpoint-xl) {
+    @content;
+  }
+}
+// Desktop-xxl-1399px
+@mixin desktop-xxl() {
+  @media only screen and (max-width: $breakpoint-xxl) {
+    @content;
+  }
+}

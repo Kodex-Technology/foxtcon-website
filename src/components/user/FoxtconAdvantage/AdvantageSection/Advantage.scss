@@ -1,0 +1,26 @@
+.foxtcon-advantages-wrapper {
+  background: #fff8f3;
+  padding: 3rem 0;
+  position: relative;
+  &::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    background: white;
+    height: 35%;
+    bottom: 0;
+    z-index: 1;
+  }
+  .foxtcon-advantages-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
+    z-index: 2;
+  }
+  .common-heading {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

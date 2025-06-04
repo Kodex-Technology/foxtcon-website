@@ -1,0 +1,75 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/mixin.scss" as *;
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 100;
+  &.scrolled {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .navbar-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    .logo-wrapper {
+      width: 150px;
+      height: 40px;
+      a {
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .menu-wrapper {
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+        li {
+          &.active {
+            a {
+              font-weight: 700;
+            }
+          }
+          &:hover {
+            a {
+              color: #fda704;
+            }
+          }
+          a {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .btn-wrapper {
+      button {
+        background: transparent;
+        border-color: white;
+        color: white;
+        transition: all 0.5s;
+        border: 1px solid white;
+        min-width: 120px;
+        padding: 8px 15px;
+        border-radius: 10px;
+        font-size: 14px;
+        overflow: hidden;
+        &:hover {
+          box-shadow: inset 5em 0 0 0 #0e53e2, inset -5em 0 0 0 #0e53e2;
+          border-color: #0e53e2;
+          color: white;
+          border: 1px solid #0e53e2;
+        }
+      }
+    }
+  }
+}

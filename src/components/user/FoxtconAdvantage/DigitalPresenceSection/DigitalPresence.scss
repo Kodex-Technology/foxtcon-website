@@ -1,0 +1,38 @@
+.digital-presence-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  padding: 3rem 0;
+  .content-col {
+    flex: 1;
+    .image-layer-col {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .layer-one {
+        align-self: flex-start;
+        width: calc(100% - 80px);
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+      }
+      .layer-two {
+        min-width: 250px;
+        width: 60%;
+        height: 250px;
+        margin-left: auto;
+        object-fit: cover;
+        border-radius: 15px;
+        align-self: flex-end;
+        border: 10px solid white;
+        margin-top: -150px;
+      }
+    }
+    .common-heading {
+      padding-right: 50px;
+      img {
+        bottom: -15px;
+      }
+    }
+  }
+}
