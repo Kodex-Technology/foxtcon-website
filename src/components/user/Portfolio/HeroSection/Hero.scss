@@ -82,7 +82,9 @@
           &:hover {
             background: rgba(14, 83, 226, 0.1); /* light glow background */
             color: #ffffff;
-            box-shadow: 0 0 8px #0e53e2, 0 0 15px #0e53e2;
+            box-shadow:
+              0 0 8px #0e53e2,
+              0 0 15px #0e53e2;
             border-color: #0e53e2;
           }
         }

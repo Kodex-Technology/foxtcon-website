@@ -107,7 +107,8 @@
                 overflow: hidden;
                 min-width: 100px;
                 &:hover {
-                  box-shadow: inset 10em 0 0 0 #0e53e2,
+                  box-shadow:
+                    inset 10em 0 0 0 #0e53e2,
                     inset -10em 0 0 0 #0e53e2;
                   border-color: #0e53e2;
                   color: white;
