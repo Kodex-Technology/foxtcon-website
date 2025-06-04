@@ -1,0 +1,53 @@
+.business-development-wrapper {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  > .common-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    h2 {
+      font-size: 32px;
+    }
+  }
+  .business-development-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    .business-development-card {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      &.order-reverse {
+        flex-direction: row-reverse;
+        .content-col {
+          .common-heading {
+            width: 80%;
+            margin-left: unset;
+          }
+        }
+      }
+      .content-col {
+        flex: 1;
+        .image-wrapper {
+          width: 100%;
+          height: 300px;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 15px;
+          }
+        }
+        .common-heading {
+          width: 80%;
+          margin-left: auto;
+          p {
+            color: #555555;
+          }
+        }
+      }
+    }
+  }
+}

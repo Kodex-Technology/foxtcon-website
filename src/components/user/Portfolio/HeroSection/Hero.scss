@@ -1,0 +1,94 @@
+.portfolio-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 50px;
+  .video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    h1 {
+      font-size: 48px;
+      font-weight: 700;
+      text-align: center;
+      span {
+        color: #fda30f;
+      }
+    }
+    .filter-container {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 100px;
+      gap: 16px;
+      align-items: end;
+
+      .filter-select {
+        width: 100%;
+        padding: 10px 5px;
+        border-radius: 10px;
+        border: 1px solid white;
+        background: transparent;
+        color: white;
+        font-size: 14px;
+        option {
+          background-color: white;
+          color: #000;
+        }
+      }
+      .btn-wrapper {
+        button {
+          background: #0e53e2;
+          border-color: #0e53e2;
+          color: white;
+          transition: all 0.5s;
+          border: 1px solid #0e53e2;
+          padding: 10px 15px;
+          border-radius: 10px;
+          font-size: 14px;
+          overflow: hidden;
+          width: 100px;
+          &:hover {
+            background: rgba(14, 83, 226, 0.1); /* light glow background */
+            color: #ffffff;
+            box-shadow:
+              0 0 8px #0e53e2,
+              0 0 15px #0e53e2;
+            border-color: #0e53e2;
+          }
+        }
+      }
+    }
+  }
+}

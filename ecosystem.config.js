@@ -6,8 +6,8 @@ module.exports = {
       args: "run start",
       env: {
         PORT: 3060,
-        NODE_ENV: "production"
-      }
-    }
-  ]
+        NODE_ENV: "production",
+      },
+    },
+  ],
 };
