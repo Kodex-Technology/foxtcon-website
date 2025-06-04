@@ -1,0 +1,14 @@
+.overview-wrapper {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  .common-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    h2 {
+      font-size: 32px;
+    }
+  }
+}

@@ -1,18 +1,16 @@
 import React from "react";
-import "./HeroSection.scss";
-
+import "./Hero.scss";
 const HeroSection = () => {
   return (
-    <div className="home-hero-wrapper">
+    <div className="management-hero-wrapper">
       <video autoPlay muted loop className="video-bg">
-        <source src="/videos/home-video.mp4" type="video/mp4" />
+        <source src="/videos/banner-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
       <div className="overlay"></div>
       <div className="container hero-content">
         <h1>
-          Foxtcon <span>Hospitality</span> <br /> Powers
-          <span> Hotel </span>Growth.
+          Performance is our language. <br /> Hospitality is our craft
         </h1>
       </div>
     </div>
