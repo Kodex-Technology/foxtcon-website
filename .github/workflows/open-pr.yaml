@@ -1,0 +1,41 @@
+name: Build Pull Requests
+run-name: ${{ github.actor }} made a pull request 🎉
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+      - ready_for_review
+    branches:
+      - development
+
+jobs:
+  code-quality:
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Generate App Name
+        id: app
+        run: |
+          echo "name=Backend" >> $GITHUB_OUTPUT
+          echo "name_underscore=Backend" >> $GITHUB_OUTPUT
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+
+      - name: Run Tests, Lint & Check
+        run: |
+          npm install
+          npm run build
