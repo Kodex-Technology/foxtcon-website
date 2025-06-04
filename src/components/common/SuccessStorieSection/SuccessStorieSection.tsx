@@ -117,30 +117,23 @@ const SuccessStorieSection = () => {
         >
           {slides.map((slide, idx) => (
             <SwiperSlide key={idx}>
-              {/* <div className="slider-card">
-                <div className="image-wrapper">
-                  <img src={slide.image} alt="img" />
-                </div>
-                <div className="content-overlay">
-                  <div className="content-detail">
-                    {" "}
-                    <h1>{slide.title}</h1>
-                    <div className="separator-line"></div>
-                    <p>{slide.desc}</p>
-                  </div>
-                  <button>
-                    Learn More
-                    <ArrowRightLongIcon />
-                  </button>
-                </div>
-              </div> */}
               <TeamCard member={slide} />
             </SwiperSlide>
           ))}
-          <div ref={prevRef} className="swiper-button-prev custom-icon">
+          <div
+            ref={prevRef}
+            role="button"
+            aria-label="Previous slide"
+            className="swiper-button-prev custom-icon"
+          >
             <ArrowLeftIcon />
           </div>
-          <div ref={nextRef} className="swiper-button-next custom-icon">
+          <div
+            ref={nextRef}
+            className="swiper-button-next custom-icon"
+            role="button"
+            aria-label="Next slide"
+          >
             <ArrowRightIcon />
           </div>
         </Swiper>

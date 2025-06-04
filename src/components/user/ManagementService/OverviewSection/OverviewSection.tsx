@@ -1,11 +1,11 @@
 import React from "react";
 import {
-  DiamondIcon,
   TechIcon,
   DocCheckIcon,
   FoxtconGroupIcon,
   LightIcon,
   BuildingIcon,
+  SettingIcon,
 } from "@/svgs";
 import AdvantageCard from "@/components/common/AdvantageCard/AdvantageCard";
 import "./Overview.scss";
@@ -29,7 +29,7 @@ const OverviewSection = () => {
       <div className="row">
         <div className="col-md-4 mb-3">
           <AdvantageCard
-            icon={<DiamondIcon />}
+            icon={<SettingIcon />}
             title="Business Development"
             description="We offer a clear asset and development plan with relationships across major brands and networks, from due diligence and brand support to transactions and sourcing."
           />
