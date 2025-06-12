@@ -1,3 +1,5 @@
+@use "../../../../styles/variables.scss" as *;
+@use "../../../../styles/mixin.scss" as *;
 .portfolio-hero-wrapper {
   position: relative;
   width: 100%;
@@ -34,12 +36,21 @@
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    @include mobile {
+      padding-top: 60px;
+    }
     h1 {
-      font-size: 48px;
+      font-size: 58px;
       font-weight: 700;
+      display: flex;
+      flex-direction: column;
       text-align: center;
-      span {
-        color: #fda30f;
+      @include tablet {
+        font-size: 42px;
+        display: block;
+      }
+      @include mobile {
+        font-size: 34px;
       }
     }
     .filter-container {
@@ -53,7 +64,12 @@
       grid-template-columns: 1fr 1fr 1fr 100px;
       gap: 16px;
       align-items: end;
-
+      @include desktop {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      @include tablet {
+        grid-template-columns: 1fr;
+      }
       .filter-select {
         width: 100%;
         padding: 10px 5px;
@@ -79,6 +95,9 @@
           font-size: 14px;
           overflow: hidden;
           width: 100px;
+          @include tablet {
+            width: 100%;
+          }
           &:hover {
             background: rgba(14, 83, 226, 0.1); /* light glow background */
             color: #ffffff;

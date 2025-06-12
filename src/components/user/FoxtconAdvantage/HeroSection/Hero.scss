@@ -1,3 +1,5 @@
+@use "../../../../styles/variables.scss" as *;
+@use "../../../../styles/mixin.scss" as *;
 .advantage-hero-wrapper {
   position: relative;
   width: 100%;
@@ -34,8 +36,14 @@
     h1 {
       font-size: 58px;
       font-weight: 700;
-      span {
-        color: #fda30f;
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        font-size: 42px;
+        display: block;
+      }
+      @include mobile {
+        font-size: 34px;
       }
     }
   }

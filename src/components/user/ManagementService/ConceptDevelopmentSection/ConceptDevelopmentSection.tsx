@@ -42,7 +42,10 @@ const ConceptDevelopmentSection = () => {
       <div className="content-col">
         <div className="image-layer-col">
           <img className="layer-one" src="/images/concept-1.jpg" alt="img" />
-          <img className="layer-two" src="/images/concept-2.jpg" alt="img" />
+          <div className="layer-two">
+            {" "}
+            <img src="/images/concept-2.jpg" alt="img" />
+          </div>
         </div>
       </div>
     </div>

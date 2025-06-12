@@ -6,7 +6,10 @@ const RevenueGenerationSection = () => {
       <div className="content-col">
         <div className="image-layer-col">
           <img className="layer-one" src="/images/revenue-1.jpg" alt="img" />
-          <img className="layer-two" src="/images/revenue-2.jpg" alt="img" />
+          <div className="layer-two">
+            {" "}
+            <img src="/images/revenue-2.jpg" alt="img" />
+          </div>
         </div>
       </div>
       <div className="content-col">

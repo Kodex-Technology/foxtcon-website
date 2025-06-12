@@ -41,7 +41,9 @@ const CoreValueSection = () => {
         <div className="content-col ">
           <div className="image-layer-col">
             <img className="layer-one" src="/images/core-1.jpg" alt="img" />
-            <img className="layer-two" src="/images/core-2.jpg" alt="img" />
+            <div className="layer-two">
+              <img src="/images/core-2.jpg" alt="img" />
+            </div>
           </div>
         </div>
         <div className="content-col">

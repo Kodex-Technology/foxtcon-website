@@ -1,6 +1,9 @@
+@use "../../../../styles/variables.scss" as *;
+@use "../../../../styles/mixin.scss" as *;
 .foxtcon-advantages-wrapper {
   background: #fff8f3;
   padding: 3rem 0;
+  margin-top: 4rem;
   position: relative;
   &::after {
     content: "";
@@ -24,6 +27,9 @@
     margin: 0 auto;
     h2 {
       font-size: 32px;
+      @include mobile {
+        font-size: 28px;
+      }
     }
   }
 }

@@ -1,5 +1,7 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/mixin.scss" as *;
 .success-storeis-wrapper {
-  padding-top: 3rem;
+  padding-top: 5.5rem;
   padding-bottom: 4rem;
   .common-heading {
     text-align: center;
@@ -8,6 +10,23 @@
     h2 {
       text-align: center;
       font-size: 32px;
+      @include tablet {
+        span {
+          padding-bottom: 18px;
+          img {
+            bottom: 0;
+          }
+        }
+      }
+      @include mobile {
+        font-size: 28px;
+        span {
+          padding-bottom: 18px;
+          img {
+            bottom: 0;
+          }
+        }
+      }
     }
     img {
       bottom: -18px;

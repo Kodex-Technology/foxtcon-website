@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="container hero-content">
         <h1>
           Expert Management
-          <br /> Exceptional Outcomes
+          <span>Exceptional Outcomes</span>
         </h1>
       </div>
     </div>

@@ -6,13 +6,16 @@ const DigitalPresenceSection = () => {
       <div className="content-col">
         <div className="image-layer-col">
           <img className="layer-one" src="/images/digital-1.png" alt="img" />
-          <img className="layer-two" src="/images/digital-2.jpg" alt="img" />
+          <div className="layer-two">
+            {" "}
+            <img src="/images/digital-2.jpg" alt="img" />
+          </div>
         </div>
       </div>
       <div className="content-col">
         <div className="common-heading">
           <h2>
-            The Foxtcon Market Influence &
+            The Foxtcon Market Influence &{" "}
             <span>
               Digital Presence
               <img src="/iconFiles/underline-heading.svg" alt="icon" />

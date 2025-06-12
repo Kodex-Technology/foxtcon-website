@@ -19,7 +19,7 @@ const OperationSection = () => {
         </p>
       </div>
       <div className="row">
-        <div className="col-md-6">
+        <div className=" col-lg-6 order-1 order-lg-1">
           <div className="operation-card">
             <div className="content-layer">
               <h1>Proactive Operations</h1>
@@ -41,7 +41,7 @@ const OperationSection = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className=" col-lg-6 order-3 order-lg-2">
           <div className="operation-card">
             <div className="content-layer">
               <h1>Hospitality Financial Management</h1>
@@ -58,7 +58,7 @@ const OperationSection = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className=" col-lg-6 order-2 order-lg-3">
           <div className="operation-card reverse-position">
             <div className="content-layer">
               <h1>Information technology that powers productivity</h1>
@@ -77,7 +77,7 @@ const OperationSection = () => {
             </div>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className=" col-lg-6 order-4 order-lg-4">
           <div className="operation-card reverse-position">
             <div className="content-layer">
               <h1>GROWTH FOCUSED, HANDS ON</h1>
