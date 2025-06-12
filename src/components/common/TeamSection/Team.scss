@@ -1,3 +1,5 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/mixin.scss" as *;
 .team-wrapper {
   padding: 3rem 0;
   display: flex;
@@ -7,6 +9,9 @@
     text-align: center;
     h2 {
       font-size: 32px;
+      @include mobile {
+        font-size: 28px;
+      }
     }
   }
   .tabs-btn {
@@ -14,6 +19,9 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
+    @include mobile {
+      justify-content: center;
+    }
     button {
       text-align: left;
       background: transparent;

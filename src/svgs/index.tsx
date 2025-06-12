@@ -909,3 +909,252 @@ export const PriceIcon = () => {
     </svg>
   );
 };
+export const ArrowRightIconTwo = () => {
+  return (
+    <svg
+      width="16"
+      height="14"
+      viewBox="0 0 16 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 7H15M15 7L9 1M15 7L9 13"
+        stroke="#FDA704"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const ArrowGridTurnIcon = () => {
+  return (
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect width="60" height="60" rx="10" fill="#E7F5FF" />
+      <path
+        d="M36.25 28.75L41.25 33.75M41.25 33.75L36.25 38.75M41.25 33.75H25C21.5482 33.75 18.75 30.9518 18.75 27.5C18.75 24.0482 21.5482 21.25 25 21.25H31.25"
+        stroke="#1864AB"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const CalendarGridTurnIcon = () => {
+  return (
+    <svg
+      width="60"
+      height="61"
+      viewBox="0 0 60 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect y="0.167969" width="60" height="60" rx="10" fill="#E4F9FD" />
+      <path
+        d="M20 25.168H40M20 25.168V36.1682C20 37.5683 20 38.268 20.2725 38.8028C20.5122 39.2732 20.8943 39.6561 21.3647 39.8958C21.899 40.168 22.5987 40.168 23.9961 40.168H36.0039C37.4013 40.168 38.1 40.168 38.6342 39.8958C39.1046 39.6561 39.4881 39.2732 39.7278 38.8028C40 38.2686 40 37.5698 40 36.1724V25.168M20 25.168V24.1682C20 22.7681 20 22.0675 20.2725 21.5327C20.5122 21.0623 20.8943 20.6801 21.3647 20.4405C21.8995 20.168 22.6001 20.168 24.0002 20.168H25M40 25.168V24.1641C40 22.7667 40 22.067 39.7278 21.5327C39.4881 21.0623 39.1046 20.6801 38.6342 20.4405C38.0995 20.168 37.4004 20.168 36.0002 20.168H35M35 17.668V20.168M35 20.168H25M25 17.668V20.168"
+        stroke="#148DA3"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const CalendarGridTurnIconTwo = () => {
+  return (
+    <svg
+      width="60"
+      height="61"
+      viewBox="0 0 60 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect y="0.332031" width="60" height="60" rx="10" fill="#E6FCF5" />
+      <path
+        d="M20 25.332H40M20 25.332V36.3323C20 37.7324 20 38.4321 20.2725 38.9669C20.5122 39.4373 20.8943 39.8201 21.3647 40.0598C21.899 40.332 22.5987 40.332 23.9961 40.332H36.0039C37.4013 40.332 38.1 40.332 38.6342 40.0598C39.1046 39.8201 39.4881 39.4373 39.7278 38.9669C40 38.4326 40 37.7339 40 36.3365V25.332M20 25.332V24.3323C20 22.9321 20 22.2316 20.2725 21.6968C20.5122 21.2264 20.8943 20.8442 21.3647 20.6045C21.8995 20.332 22.6001 20.332 24.0002 20.332H25M40 25.332V24.3282C40 22.9308 40 22.231 39.7278 21.6968C39.4881 21.2264 39.1046 20.8442 38.6342 20.6045C38.0995 20.332 37.4004 20.332 36.0002 20.332H35M25 20.332H35M25 20.332V17.832M35 20.332V17.832M33.125 32.832H26.875"
+        stroke="#087F5B"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const LocationGridTurnIcon = () => {
+  return (
+    <svg
+      width="60"
+      height="61"
+      viewBox="0 0 60 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect y="0.5" width="60" height="60" rx="10" fill="#FFF9DB" />
+      <path
+        d="M21.25 27.9036C21.25 33.9683 26.5556 38.9837 28.904 40.9065C29.2401 41.1817 29.4101 41.3209 29.6609 41.3915C29.8561 41.4465 30.1435 41.4465 30.3387 41.3915C30.59 41.3208 30.7588 41.1829 31.0962 40.9067C33.4446 38.9838 38.7499 33.9689 38.7499 27.9041C38.7499 25.609 37.8281 23.4076 36.1871 21.7847C34.5462 20.1617 32.3207 19.25 30.0001 19.25C27.6795 19.25 25.4538 20.1619 23.8128 21.7848C22.1719 23.4077 21.25 25.6084 21.25 27.9036Z"
+        stroke="#E67700"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M27.5 26.75C27.5 28.1307 28.6193 29.25 30 29.25C31.3807 29.25 32.5 28.1307 32.5 26.75C32.5 25.3693 31.3807 24.25 30 24.25C28.6193 24.25 27.5 25.3693 27.5 26.75Z"
+        stroke="#E67700"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const TimeGridTurnIcon = () => {
+  return (
+    <svg
+      width="60"
+      height="61"
+      viewBox="0 0 60 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect y="0.667969" width="60" height="60" rx="10" fill="#F8F0FC" />
+      <path
+        d="M30 24.418V30.668H36.25M30 41.918C23.7868 41.918 18.75 36.8812 18.75 30.668C18.75 24.4548 23.7868 19.418 30 19.418C36.2132 19.418 41.25 24.4548 41.25 30.668C41.25 36.8812 36.2132 41.918 30 41.918Z"
+        stroke="#862E9C"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const PriceGridTurnIcon = () => {
+  return (
+    <svg
+      width="60"
+      height="61"
+      viewBox="0 0 60 61"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect y="0.832031" width="60" height="60" rx="10" fill="#F3F0FF" />
+      <path
+        d="M25.8398 33.7453C25.8398 35.3578 27.0773 36.6578 28.6148 36.6578H31.7523C33.0898 36.6578 34.1773 35.5203 34.1773 34.1203C34.1773 32.5953 33.5148 32.0578 32.5273 31.7078L27.4898 29.9578C26.5023 29.6078 25.8398 29.0703 25.8398 27.5453C25.8398 26.1453 26.9273 25.0078 28.2648 25.0078H31.4023C32.9398 25.0078 34.1773 26.3078 34.1773 27.9203"
+        stroke="#5F3DC4"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M30 23.332V38.332"
+        stroke="#5F3DC4"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M30 43.332C36.9036 43.332 42.5 37.7356 42.5 30.832C42.5 23.9285 36.9036 18.332 30 18.332C23.0964 18.332 17.5 23.9285 17.5 30.832C17.5 37.7356 23.0964 43.332 30 43.332Z"
+        stroke="#5F3DC4"
+        strokeWidth="2.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const DropDownIcon = () => {
+  return (
+    <svg
+      width="16"
+      height="9"
+      viewBox="0 0 16 9"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15 1L8 8L1 1"
+        stroke="#404040"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const UploadIcon = () => {
+  return (
+    <svg
+      width="70"
+      height="69"
+      viewBox="0 0 70 69"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="0.5" width="69" height="69" rx="10" fill="#E9F1FF" />
+      <g clipPath="url(#clip0_395_15026)">
+        <path
+          d="M35.0007 39.3346V32.0846M35.0007 32.0846L31.3757 34.5013M35.0007 32.0846L38.6256 34.5013M48.2923 38.1263C48.2923 35.4569 46.1284 33.293 43.459 33.293C43.4304 33.293 43.4025 33.2932 43.374 33.2937C42.788 29.1943 39.2621 26.043 35.0007 26.043C31.6214 26.043 28.7055 28.0247 27.3506 30.8894C24.2006 31.0955 21.709 33.7157 21.709 36.9178C21.709 40.2545 24.4139 42.9597 27.7507 42.9597L43.459 42.9596C46.1284 42.9596 48.2923 40.7957 48.2923 38.1263Z"
+          stroke="#0E53E2"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_395_15026">
+          <rect
+            width="29"
+            height="29"
+            fill="white"
+            transform="translate(20.5 20)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+export const MenuIcon = () => {
+  return (
+    <svg
+      width="20"
+      height="14"
+      viewBox="0 0 20 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 7H19M1 1H19M7 13H19"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const CloseIcon = () => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13 1L1 13M1 1L13 13"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

@@ -12,6 +12,7 @@ const jobPostData = [
           "We’re looking for a mid-level project manager to join our team",
         type: "Full-Time",
         salary: "80k - 100k",
+        slug: "project-manager",
       },
       {
         position: "Senior Project Manager",
@@ -19,6 +20,7 @@ const jobPostData = [
         description: "Lead projects and mentor junior team members",
         type: "Full-Time",
         salary: "100k - 120k",
+        slug: "senior-project-manager",
       },
     ],
   },
@@ -33,6 +35,7 @@ const jobPostData = [
           "We’re looking for a mid-level project manager to join our team",
         type: "Full-Time",
         salary: "80k - 100k",
+        slug: "project-manager-2",
       },
       {
         position: "Senior Project Manager",
@@ -40,6 +43,7 @@ const jobPostData = [
         description: "Lead projects and mentor junior team members",
         type: "Full-Time",
         salary: "100k - 120k",
+        slug: "senior-project-manager-2",
       },
     ],
   },

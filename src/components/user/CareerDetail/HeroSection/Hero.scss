@@ -1,6 +1,4 @@
-@use "../../../../styles/variables.scss" as *;
-@use "../../../../styles/mixin.scss" as *;
-.career-hero-wrapper {
+.career-detail-hero-wrapper {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -34,16 +32,10 @@
     text-align: left;
 
     h1 {
-      font-size: 58px;
+      font-size: 60px;
       font-weight: 700;
-      display: flex;
-      flex-direction: column;
-      @include tablet {
-        font-size: 42px;
-        display: block;
-      }
-      @include mobile {
-        font-size: 34px;
+      span {
+        color: #fda30f;
       }
     }
   }

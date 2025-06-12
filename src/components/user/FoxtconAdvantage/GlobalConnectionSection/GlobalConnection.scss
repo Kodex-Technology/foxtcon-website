@@ -1,8 +1,13 @@
+@use "../../../../styles/variables.scss" as *;
+@use "../../../../styles/mixin.scss" as *;
 .global-connection-wrapper {
   display: flex;
   align-items: center;
   gap: 50px;
   padding: 3rem 0;
+  @include desktop {
+    flex-direction: column;
+  }
   .content-col {
     flex: 1;
     .image-layer-col {
@@ -20,15 +25,32 @@
         min-width: 250px;
         width: 60%;
         height: 250px;
-        object-fit: cover;
         border-radius: 15px;
         align-self: flex-start;
-        border: 10px solid white;
+        background: white;
         margin-top: -150px;
+        overflow: hidden;
+        padding: 10px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+        @include mobile {
+          min-width: 200px;
+          height: 200px;
+          width: 200px;
+        }
       }
     }
     .common-heading {
       padding-right: 50px;
+      @include mobile {
+        h2 {
+          font-size: 22px;
+        }
+      }
       img {
         bottom: -15px;
       }

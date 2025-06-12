@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.scss";
 const HeroSection = () => {
   return (
-    <div className="career-hero-wrapper">
+    <div className="career-detail-hero-wrapper">
       <video autoPlay muted loop className="video-bg">
         <source src="/videos/banner-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
@@ -11,7 +11,7 @@ const HeroSection = () => {
       <div className="container hero-content">
         <h1>
           Expert Management
-          <span>Exceptional Outcomes</span>
+          <br /> Exceptional Outcomes
         </h1>
       </div>
     </div>

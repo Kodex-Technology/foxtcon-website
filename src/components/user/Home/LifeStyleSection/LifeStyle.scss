@@ -1,8 +1,16 @@
+@use "../../../../styles/variables.scss" as *;
+@use "../../../../styles/mixin.scss" as *;
 .life-style-wrapper {
   display: flex;
   gap: 20px;
-  padding-bottom: 2rem;
+  padding-top: 7rem;
   align-items: center;
+  flex-direction: row;
+
+  @include desktop {
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
   .life-style-col {
     flex: 1;
     &.image-layer-col {
@@ -23,6 +31,7 @@
       .layer-one {
         width: calc(100% - 50px);
         height: 100%;
+        min-height: 400px;
         object-fit: cover;
         border-radius: 15px;
       }
@@ -30,13 +39,23 @@
         width: 60%;
         height: 250px;
         min-width: 250px;
-        object-fit: cover;
         border-radius: 15px;
         position: absolute;
         right: 0;
         bottom: -10px;
-        border: 10px solid white;
+        background: white;
+        padding: 10px;
         z-index: 2;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 15px;
+        }
+        @include mobile {
+          height: 200px;
+          min-width: 200px;
+        }
       }
     }
     &.content-col {
@@ -45,6 +64,10 @@
       gap: 2px;
       padding-right: 2rem;
       padding-left: 2rem;
+      @include mobile {
+        padding-left: unset;
+        padding-right: unset;
+      }
       .image-wrapper {
         padding-bottom: 2rem;
         width: 150px;
@@ -54,6 +77,11 @@
       }
       .common-heading {
         padding-bottom: 15px;
+        @include mobile {
+          h2 {
+            font-size: 22px;
+          }
+        }
         img {
           bottom: -18px;
         }

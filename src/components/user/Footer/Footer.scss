@@ -9,6 +9,10 @@
     display: flex;
     gap: 10px;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @include desktop {
+      row-gap: 20px;
+    }
     .footer-col {
       flex: 1;
       display: flex;
@@ -16,6 +20,14 @@
       gap: 20px;
       &:first-child {
         flex: 1.5;
+      }
+      @include desktop {
+        flex: 0 0 50%;
+        max-width: calc(50% - 20px);
+      }
+      @include mobile {
+        flex: 0 0 100%;
+        max-width: 100%;
       }
       .logo-wrapper {
         width: 160px;
@@ -53,6 +65,9 @@
         color: #2d2d2e;
         font-size: 28px;
         font-weight: 700;
+        @include mobile {
+          font-size: 22px;
+        }
       }
       .footer-links {
         ul {

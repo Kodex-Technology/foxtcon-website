@@ -7,7 +7,10 @@
   height: 70px;
   z-index: 100;
   &.scrolled {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+  }
+  @include desktop {
+    background: rgba(0, 0, 0, 0.7);
   }
   .navbar-container {
     display: flex;
@@ -48,10 +51,37 @@
             font-size: 16px;
             font-weight: 400;
           }
+          &.mobile-signin {
+            display: none;
+          }
+        }
+      }
+      &.show {
+        left: 0;
+      }
+      @include desktop {
+        position: fixed;
+        transition: left 0.3s ease-in-out;
+        width: 280px;
+        background: rgba(0, 0, 0, 0.7);
+        height: calc(100vh - 70px);
+        top: 70px;
+        padding: 1rem;
+        left: -280px;
+        ul {
+          flex-direction: column;
+          li {
+            &.mobile-signin {
+              display: block;
+            }
+          }
         }
       }
     }
     .btn-wrapper {
+      @include desktop {
+        display: none;
+      }
       button {
         background: transparent;
         border-color: white;
@@ -71,6 +101,12 @@
           color: white;
           border: 1px solid #0e53e2;
         }
+      }
+    }
+    .expand-toggle {
+      display: none;
+      @include desktop {
+        display: block;
       }
     }
   }

@@ -139,7 +139,7 @@ const TeamSection = () => {
       <div className="tab-content">
         <div className="row mt-4">
           {visibleTeam.map((member, index) => (
-            <div className="col-md-4 mb-4" key={index}>
+            <div className="col-md-6 col-lg-4 mb-4" key={index}>
               <TeamCard member={member} showIcon={true} />
             </div>
           ))}

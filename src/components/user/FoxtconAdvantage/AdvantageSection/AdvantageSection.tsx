@@ -22,21 +22,21 @@ const AdvantageSection = () => {
           </p>
         </div>
         <div className="row">
-          <div className="col-md-4 mb-3">
+          <div className="col-md-6 col-lg-4 mb-3">
             <AdvantageCard
               icon={<DiamondIcon />}
               title="Luxury Operator"
               description="Award-winning elite operator approved for all upper-upscale and luxury brands within the Marriott, Hilton and Hyatt brands"
             />
           </div>
-          <div className="col-md-4 mb-3">
+          <div className="col-md-6 col-lg-4 mb-3">
             <AdvantageCard
               icon={<SettingIcon />}
               title="Lifestyle Expertise"
               description="Extensive experience with independent hotels and resorts and lifestyle brands under Crescent's Latitudes Collection"
             />
           </div>
-          <div className="col-md-4 mb-3">
+          <div className="col-md-6 col-lg-4 mb-3">
             <AdvantageCard
               icon={<BarIcon />}
               title="Revenue Engine"
