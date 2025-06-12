@@ -1,12 +1,15 @@
+"use client";
 import React from "react";
 import { ClockIcon, PriceIcon } from "@/svgs";
-
+import { useRouter } from "next/navigation";
+import { WebsiteRoutes } from "@/constant/appRoutes";
 interface Job {
   position: string;
   location: string;
   description: string;
   type: string;
   salary: string;
+  slug: string;
 }
 
 interface JobPostCardProps {
@@ -16,6 +19,11 @@ interface JobPostCardProps {
 }
 
 const JobPostCard: React.FC<JobPostCardProps> = ({ title, subtitle, jobs }) => {
+  const router = useRouter();
+
+  const handleViewClick = (slug: string) => {
+    router.push(`${WebsiteRoutes.CAREER}/${slug}`);
+  };
   return (
     <div className="job-post-card">
       <div className="content-col">
@@ -51,7 +59,7 @@ const JobPostCard: React.FC<JobPostCardProps> = ({ title, subtitle, jobs }) => {
                 </p>
               </div>
               <div className="btn-wrapper">
-                <button>View</button>
+                <button onClick={() => handleViewClick(job.slug)}>View</button>
               </div>
             </div>
           </div>

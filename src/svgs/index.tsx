@@ -1069,3 +1069,92 @@ export const PriceGridTurnIcon = () => {
     </svg>
   );
 };
+export const DropDownIcon = () => {
+  return (
+    <svg
+      width="16"
+      height="9"
+      viewBox="0 0 16 9"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15 1L8 8L1 1"
+        stroke="#404040"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const UploadIcon = () => {
+  return (
+    <svg
+      width="70"
+      height="69"
+      viewBox="0 0 70 69"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect x="0.5" width="69" height="69" rx="10" fill="#E9F1FF" />
+      <g clipPath="url(#clip0_395_15026)">
+        <path
+          d="M35.0007 39.3346V32.0846M35.0007 32.0846L31.3757 34.5013M35.0007 32.0846L38.6256 34.5013M48.2923 38.1263C48.2923 35.4569 46.1284 33.293 43.459 33.293C43.4304 33.293 43.4025 33.2932 43.374 33.2937C42.788 29.1943 39.2621 26.043 35.0007 26.043C31.6214 26.043 28.7055 28.0247 27.3506 30.8894C24.2006 31.0955 21.709 33.7157 21.709 36.9178C21.709 40.2545 24.4139 42.9597 27.7507 42.9597L43.459 42.9596C46.1284 42.9596 48.2923 40.7957 48.2923 38.1263Z"
+          stroke="#0E53E2"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_395_15026">
+          <rect
+            width="29"
+            height="29"
+            fill="white"
+            transform="translate(20.5 20)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+export const MenuIcon = () => {
+  return (
+    <svg
+      width="20"
+      height="14"
+      viewBox="0 0 20 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1 7H19M1 1H19M7 13H19"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+export const CloseIcon = () => {
+  return (
+    <svg
+      width="14"
+      height="14"
+      viewBox="0 0 14 14"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M13 1L1 13M1 1L13 13"
+        stroke="white"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};

@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="overlay"></div>
       <div className="container hero-content">
         <h1>
-          We don&apos;t just manage properties. <br /> We build legacies.
+          We don&apos;t just manage properties. <span>We build legacies.</span>
         </h1>
         <div className="filter-container">
           <select name="brand" className="filter-select">

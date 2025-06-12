@@ -84,13 +84,10 @@ const PressReleaseSection = () => {
             }
           }}
           spaceBetween={20}
-          slidesPerView={3}
+          slidesPerView={1}
           autoplay={false}
           breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            640: {
+            767: {
               slidesPerView: 2,
             },
             1024: {

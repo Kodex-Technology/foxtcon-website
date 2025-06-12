@@ -10,7 +10,11 @@ const CareerPage = () => {
     <div className="career-page-wrapper">
       <HeroSection />
       <div className="container">
-        <JobPostSection />
+        <JobPostSection
+          headingTitle="Start doing work that"
+          headingHighlight="matters"
+          headingSubtitle="Our philosophy is simple - hire a team of diverse, passionate people and foster a culture that empowers you to do your best work."
+        />
         <SuccessStorieSection />
         <MapSection />
       </div>

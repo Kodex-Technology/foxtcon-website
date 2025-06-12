@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="overlay"></div>
       <div className="container hero-content">
         <h1>
-          Performance is our language. <br /> Hospitality is our craft
+          Performance is our language. <span>Hospitality is our craft</span>
         </h1>
       </div>
     </div>

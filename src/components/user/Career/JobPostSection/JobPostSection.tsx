@@ -1,20 +1,29 @@
 import React from "react";
+import "./JobPost.scss";
 import MoreJobs from "@/components/common/MoreJobs/MoreJobs";
-const JobPostSection = () => {
+interface JobPostSectionProps {
+  headingTitle?: string;
+  headingHighlight: string;
+  headingSubtitle: string;
+  headingClass?: string;
+}
+const JobPostSection = ({
+  headingTitle,
+  headingHighlight,
+  headingSubtitle,
+  headingClass = "",
+}: JobPostSectionProps) => {
   return (
     <div className="job-post-wrapper">
-      <div className="common-heading">
+      <div className={`common-heading ${headingClass}`}>
         <h2>
-          Start doing work that{" "}
+          {headingTitle}{" "}
           <span>
-            matters
+            {headingHighlight}
             <img src="/iconFiles/underline-heading.svg" alt="icon" />
           </span>
         </h2>
-        <p>
-          Our philosophy is simple - hire a team of diverse, passionate people
-          and foster a culture that empowers you to do your best work.
-        </p>
+        <p>{headingSubtitle}</p>
       </div>
       <MoreJobs />
     </div>
