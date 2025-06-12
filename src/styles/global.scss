@@ -58,3 +58,6 @@ p {
   }
 }
 //advantages
+.video-bg::-webkit-media-controls {
+  display: none !important;
+}

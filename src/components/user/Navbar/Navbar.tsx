@@ -45,11 +45,12 @@ const Navbar = () => {
               <li
                 key={index}
                 className={pathname.startsWith(item.href) ? "active" : ""}
+                onClick={() => setOpenSidebar(false)}
               >
                 <Link href={item.href}>{item.label}</Link>
               </li>
             ))}
-            <li className="mobile-signin">
+            <li className="mobile-signin" onClick={() => setOpenSidebar(false)}>
               <Link href="#">Sign In</Link>
             </li>
           </ul>
