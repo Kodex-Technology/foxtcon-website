@@ -39,6 +39,9 @@
   }
   .swiper-button-next,
   .swiper-button-prev {
+    @include mobile {
+      display: none;
+    }
     background-color: #fda704;
     border-radius: 50%;
     width: 40px;
