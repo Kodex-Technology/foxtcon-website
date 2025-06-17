@@ -7,8 +7,11 @@
   gap: 2rem;
   .common-heading {
     text-align: center;
+    gap: 5px;
     h2 {
       font-size: 32px;
+      padding: 0;
+      margin: 0;
       @include mobile {
         font-size: 28px;
       }
@@ -91,6 +94,9 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             button {
+              display: flex;
+              flex-direction: column;
+              gap: 2px;
               text-align: left;
               background: transparent;
               color: #2d2d2e;

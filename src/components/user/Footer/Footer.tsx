@@ -4,9 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   FacebookIcon,
-  TwitterIcon,
   InstagramIcon,
-  PinterestIcon,
   CarretRightIcon,
   LocationIcon,
   MailIcon,
@@ -39,21 +37,21 @@ const Footer = () => {
                   <FacebookIcon />
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#">
                   <TwitterIcon />
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="#">
                   <InstagramIcon />
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#">
                   <PinterestIcon />
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -125,14 +123,15 @@ const Footer = () => {
             <ul>
               <li>
                 <LocationIcon />
-                Gresik United East Java Nggepeng Village 6312
+                7300 NE Parvin Road, Kansas City MO 64117
               </li>
               <li>
                 <MailIcon />
-                Hello@Email.com
+                sales@foxtcon.com
               </li>
               <li>
-                <PhoneIcon />( +62 ) 123 456 789
+                <PhoneIcon />
+                (816) 499-1531
               </li>
             </ul>
           </div>

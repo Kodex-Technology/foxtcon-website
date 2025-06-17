@@ -18,14 +18,14 @@
   }
   .brand-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
     align-items: center;
     justify-items: center;
   }
   .brand-col {
     img {
-      max-width: 100px;
+      max-width: 180px;
       height: auto;
       object-fit: contain;
     }

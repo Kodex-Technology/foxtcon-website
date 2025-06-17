@@ -1,6 +1,11 @@
 import React from "react";
 import Link from "next/link";
-import { RoomIcon, DiningIcon, SpaceIcon, ResturantIcon } from "@/svgs";
+import {
+  RoomIcon,
+  DiningIcon,
+  TeamMembersIcon,
+  RenovationProjectIcon,
+} from "@/svgs";
 import "./Management.scss";
 const ManagementSection = () => {
   return (
@@ -8,16 +13,17 @@ const ManagementSection = () => {
       <div className="management-col">
         <div className="common-heading">
           <h2>
-            Innovative Hotel Management Company With a{" "}
+            Foxtcon Hospitality: Inspired Management.{" "}
             <span>
-              Bold Spirit{" "}
+              Exceptional{" "}
               <img
                 src="/iconFiles/underline-heading.svg"
                 alt="icon"
                 width={20}
                 height={20}
               />
-            </span>
+            </span>{" "}
+            Growth
           </h2>
         </div>
         <div className="description">
@@ -47,25 +53,25 @@ const ManagementSection = () => {
           <div className="content-row">
             <RoomIcon />
             <h2>
-              25,000+<span>Rooms under management</span>
+              1,000+<span>Rooms </span>
             </h2>
           </div>
           <div className="content-row">
             <DiningIcon />
             <h2>
-              120+<span>Properties under management</span>
+              14+<span>Properties under management</span>
             </h2>
           </div>
           <div className="content-row">
-            <SpaceIcon />
+            <TeamMembersIcon />
             <h2>
-              1,000,000+<span>Square feet of meeting space</span>
+              550+<span>Team Members</span>
             </h2>
           </div>
           <div className="content-row">
-            <ResturantIcon />
+            <RenovationProjectIcon />
             <h2>
-              300+<span>Restaurants, bars & outlets</span>
+              20 million+<span>Renovation Projects</span>
             </h2>
           </div>
         </div>

@@ -102,8 +102,6 @@ const TeamSection = () => {
     "Senior Leadership",
     "Operation",
     "Business Development",
-    "Finance",
-    "People & Culture",
   ];
 
   const filteredTeam =

@@ -14,38 +14,45 @@ const CommunitySection = () => {
                 Community
                 <img src="/iconFiles/underline-heading.svg" alt="icon" />
               </span>
+              <br />
+              Serving with Purpose
             </h2>
             <p>
-              Community service is part of our corporate culture and who we are.
-              Whether supporting schools and families or protecting our
-              environment, we care about where we live, work and play.
+              At Foxtcon Hospitality, community is more than a commitment—it’s
+              part of who we are. From supporting local schools and families to
+              championing environmental stewardship, we take pride in giving
+              back to the places where we live, work, and grow. Our culture of
+              service extends beyond our properties and into the heart of every
+              community we touch.
             </p>
           </div>
           <div className="content-card">
             <h2>
               <ArrorTurnIcon />
-              Foxtcon Values Its People
+              Empowering People, Elevating Hospitality
             </h2>
             <p>
-              We encourage their energy, passion and abilities to make our
-              hotels run in a remarkable way. When that happens, our guests
-              experience The Crescent Care, an industry leading ideal. Our
-              guests benefit from what each associate does as a part of this
-              vision.<Link href="#">Read More</Link>
+              We believe our people are our greatest strength. Their passion,
+              energy, and dedication are what make our hotels exceptional. By
+              nurturing talent and encouraging innovation, we create
+              environments where both our associates and our guests thrive. This
+              is the essence of the Foxtcon experience—hospitality led by heart,
+              powered by purpose...
+              <Link href="#">Read More</Link>
             </p>
           </div>
           <div className="content-card">
             <h2>
               <ArrorTurnIcon />
-              Foxtcon Embraces Diversity
+              Celebrating Diversity, Strengthening Culture
             </h2>
             <p>
-              At Crescent, our differences are what make us great. That&apos;s
-              why we are dedicated to creating an environment that encourages
-              open conversations about diversity, race, equity and inclusion. We
-              stand out because we believe in our people. Through education,
-              recruiting and promoting diverse talent, we can strengthen our
-              culture and community.
+              We believe our people are our greatest strength. Their passion,
+              energy, and dedication are what make our hotels exceptional. By
+              nurturing talent and encouraging innovation, we create
+              environments where both our associates and our guests thrive. This
+              is the essence of the Foxtcon experience—hospitality led by heart,
+              powered by purpose...
               <Link href="#">Read More</Link>
             </p>
           </div>
