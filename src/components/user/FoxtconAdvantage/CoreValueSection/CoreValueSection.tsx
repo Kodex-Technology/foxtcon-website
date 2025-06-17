@@ -4,19 +4,23 @@ import "./CoreValue.scss";
 const tabData = [
   {
     title: "Accountability",
-    content: `At Foxtcon, we believe that direct experience drives success. Our personalized, hands-on approach to hotel management is crucial to consistent results and increased profitability. We are accountable to you and your success matters most to us.`,
+    subTitle: "Your Success Is Our Responsibility",
+    content: `At Foxtcon, we believe that true leadership comes from experience. Our hands-on, personalized approach to hotel management ensures consistent performance and measurable growth. We take ownership of every detail—because your goals are our goals. With unwavering dedication and operational precision, we hold ourselves accountable to the highest standards—delivering results that matter.`,
   },
   {
     title: "Measurable Results",
-    content: `We set high performance standards and track metrics across all operations. Our focus on results ensures profitability and measurable success at every stage.`,
+    subTitle: "Driven by Data. Focused on Impact.",
+    content: `At Foxtcon, we hold ourselves to the highest standards of performance. Every strategy we implement is backed by data, tracked through key metrics, and refined for maximum impact. From operations to guest satisfaction, we measure what matters—ensuring profitability, transparency, and success at every stage of your hospitality journey`,
   },
   {
     title: "Communication",
-    content: `Transparent and consistent communication is the backbone of our operations. We work closely with partners to align strategies and keep all stakeholders informed.`,
+    subTitle: "Clear. Consistent. Collaborative.",
+    content: `At Foxtcon, transparent communication is at the heart of everything we do. We believe that strong partnerships are built on trust, and trust begins with clarity. By maintaining open, consistent dialogue, we ensure that every strategy is aligned, every stakeholder is informed, and every decision is made with confidence`,
   },
   {
     title: "Diversity",
-    content: `We value diverse perspectives and foster inclusive environments that fuel creativity and innovation in our teams and guest experiences.`,
+    subTitle: "Empowering voices. Enriching journeys.",
+    content: `At Foxtcon, we celebrate the strength found in diversity. By embracing a wide range of backgrounds, ideas, and voices, we cultivate inclusive environments where creativity thrives and innovation flourishes. This commitment not only enriches our teams—it elevates every guest experience we create.`,
   },
 ];
 const CoreValueSection = () => {
@@ -35,6 +39,9 @@ const CoreValueSection = () => {
               height={20}
             />
           </span>
+        </h2>
+        <h2>
+          Built by Hoteliers. Driven by Excellence
         </h2>
       </div>
       <div className="content-overlay">
@@ -72,6 +79,9 @@ const CoreValueSection = () => {
                     onClick={() => setActiveTab(index)}
                   >
                     {tab.title}
+                    <span>
+                      {tab.subTitle}
+                    </span>
                   </button>
                 ))}
               </div>

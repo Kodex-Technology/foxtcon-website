@@ -8,11 +8,11 @@ const AboutSection = () => {
         <div className="about-col">
           <div className="content-col">
             <div className="common-heading">
-              <p>Our Culture, Your Career</p>
+              <p>Our Culture. Your Future.</p>
               <h2>
-                What Are You{" "}
+                What {" "}
                 <span>
-                  Passionate
+                  Inspires
                   <img
                     src="/iconFiles/underline-heading.svg"
                     alt="icon"
@@ -20,15 +20,21 @@ const AboutSection = () => {
                     height={20}
                   />
                 </span>{" "}
-                About?
+                You?
+                <br />
+                Let’s Build It Together
               </h2>
             </div>
             <div className="description">
               <p>
-                Your career journey with Crescent has endless possibilities. We
-                offer exciting positions, from corporate to hotel associates to
-                internships. Work in dynamic environments that foster curiosity,
-                collaboration and connectio
+                At Foxtcon Hospitality, your career is more than a job—it’s a journey
+                filled with purpose, growth, and possibility.
+                Whether you're joining us at the corporate level, on property,
+                or through an internship, you’ll thrive in dynamic environments that spark curiosity,
+                foster collaboration, and celebrate connection.
+              </p>
+              <p>
+                We’re passionate about people—and that starts with you.
               </p>
             </div>
             <div className="btn-wrapper">

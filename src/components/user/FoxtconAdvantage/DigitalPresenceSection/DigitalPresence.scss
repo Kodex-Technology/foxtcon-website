@@ -48,13 +48,18 @@
     }
     .common-heading {
       padding-right: 50px;
+      h2 {
+        span {
+          margin-bottom: 8px;
+        }
+      }
       @include mobile {
         h2 {
           font-size: 22px;
         }
       }
       img {
-        bottom: -15px;
+        bottom: -12px;
       }
     }
   }

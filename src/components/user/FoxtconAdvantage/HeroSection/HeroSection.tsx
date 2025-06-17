@@ -18,8 +18,10 @@ const HeroSection = () => {
       <div className="overlay"></div>
       <div className="container hero-content">
         <h1>
-          The Foxtcon Advantage,{" "}
-          <span>Powers Intelligence in Every Decision</span>
+          The Foxtcon Advantage,
+          <span>
+            Intelligent Hospitality, Elevated by Expertise
+          </span>
         </h1>
       </div>
     </div>

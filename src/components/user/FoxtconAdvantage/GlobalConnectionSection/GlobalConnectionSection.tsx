@@ -13,11 +13,11 @@ const GlobalConnectionSection = () => {
             </span>
           </h2>
           <p>
-            Foxtcon delivers comprehensive digital marketing support, including
-            expert website development, advanced SEO optimization, targeted
-            online marketing strategies, dynamic social media management, and
-            seamless CRM integration — all designed to enhance brand visibility,
-            engage customers effectively, and drive sustainable business growth.
+            At Foxtcon, we empower brands through a full spectrum of digital marketing
+            solutions — from high-impact website development and precision SEO to data-driven
+            online campaigns, dynamic social media engagement, and seamless CRM integration.
+            Our strategic approach is designed to elevate brand visibility, deepen customer
+            engagement, and accelerate long-term business growth across global markets.
           </p>
         </div>
       </div>

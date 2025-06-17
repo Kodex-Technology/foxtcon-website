@@ -15,18 +15,22 @@ const DigitalPresenceSection = () => {
       <div className="content-col">
         <div className="common-heading">
           <h2>
-            The Foxtcon Market Influence &{" "}
+            Market Influence &{" "}
             <span>
               Digital Presence
               <img src="/iconFiles/underline-heading.svg" alt="icon" />
             </span>
+            <br />
+            Smart Visibility, Seamless Impact
           </h2>
           <p>
-            Foxtcon delivers comprehensive digital marketing support, including
-            expert website development, advanced SEO optimization, targeted
-            online marketing strategies, dynamic social media management, and
-            seamless CRM integration — all designed to enhance brand visibility,
-            engage customers effectively, and drive sustainable business growth.
+            Foxtcon Hospitality empowers brands with a full-spectrum digital marketing approach
+            designed to captivate, convert, and grow. From expertly crafted websites and advanced
+            SEO to precision-targeted campaigns, dynamic social media management, and integrated CRM
+            solutions—we ensure your brand stands out in a competitive digital landscape.
+            <br />
+            Our strategies are built to elevate visibility, deepen customer engagement,
+            and drive sustainable business growth across every digital touchpoint.
           </p>
         </div>
       </div>

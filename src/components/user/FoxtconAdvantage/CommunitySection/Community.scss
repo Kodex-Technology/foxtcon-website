@@ -40,6 +40,13 @@
         width: 100%;
       }
       .common-heading {
+        h2 {
+          span {
+            img {
+              bottom: -8px;
+            }
+          }
+        }
         @include mobile {
           h2 {
             font-size: 22px;

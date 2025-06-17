@@ -4,7 +4,7 @@ const MapSection = () => {
   return (
     <div className="map-wrapper">
       <div className="common-heading">
-        <p>Contact Us</p>
+        <p>Connect With Us</p>
         <h2>
           We’d love to hear{" "}
           <span>
@@ -17,10 +17,10 @@ const MapSection = () => {
             />
           </span>{" "}
         </h2>
-        <p>We have offices and teams all around the world.</p>
+        <p>With teams and offices across the globe, Foxtcon Hospitality is always within reach. Whether you’re looking to partner, collaborate, or simply say hello—we’re here and ready to connect</p>
       </div>
       <div className="map-container">
-        <img src="/images/map.png" alt="" />
+        <img src="/images/map-1.png" alt="" />
       </div>
       <div className="map-support-grid">
         <div className="row">
@@ -42,7 +42,7 @@ const MapSection = () => {
             <div className="map-support-card">
               <h3>Phone</h3>
               <p>Mon-Fri from 8 am to 5 pm</p>
-              <h2>+1 2031 0213 020</h2>
+              <h2>(816) 499-1531</h2>
             </div>
           </div>
         </div>

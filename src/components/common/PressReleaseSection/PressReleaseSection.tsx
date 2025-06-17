@@ -9,22 +9,22 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 const slides = [
   {
-    image: "/images/hotel-img-1.svg",
+    image: "/images/hotel-img-5.svg",
     title:
-      "Crescent Hotels & Resorts Announces Management of The St. Anthony, a Luxury Collection Hotel",
-    desc: "The Historic San Antonio Property Combines Old World Glamour with Contemporary",
+      "Choice Hotels Expands in Kansas City with The Atrium, a Boutique Hotel Experience",
+    desc: "The Modern Kansas City Property Reflects Local Culture with Thoughtful Design and Comfor",
   },
   {
-    image: "/images/hotel-img-2.svg",
+    image: "/images/hotel-img-6.svg",
     title:
-      "Crescent Hotels & Resorts Announces Management of The St. Anthony, a Luxury Collection Hotel",
-    desc: "The Historic San Antonio Property Combines Old World Glamour with Contemporary",
+      "Wyndham Hotels Unveils Flagship Property in the Heart of Kansas City Downtown",
+    desc: "The Contemporary Hotel Offers Elevated Stays with Smart Amenities and Urban Style",
   },
   {
-    image: "/images/hotel-img-3.svg",
+    image: "/images/hotel-img-7.svg",
     title:
-      "Crescent Hotels & Resorts Announces Management of The St. Anthony, a Luxury Collection Hotel",
-    desc: "The Historic San Antonio Property Combines Old World Glamour with Contemporary",
+      "Radisson Hotels Launches Premium Tower Suites in Kansas City’s Business District",
+    desc: "The Sleek New Destination Combines Upscale Living with Exceptional City Views",
   },
   {
     image: "/images/hotel-img-4.svg",
@@ -35,14 +35,14 @@ const slides = [
   {
     image: "/images/hotel-img-3.svg",
     title:
-      "Crescent Hotels & Resorts Announces Management of The St. Anthony, a Luxury Collection Hotel",
-    desc: "The Historic San Antonio Property Combines Old World Glamour with Contemporary",
+      "Wyndham Hotels Unveils Flagship Property in the Heart of Kansas City Downtown",
+    desc: "The Contemporary Hotel Offers Elevated Stays with Smart Amenities and Urban Style",
   },
   {
     image: "/images/hotel-img-1.svg",
     title:
-      "Crescent Hotels & Resorts Announces Management of The St. Anthony, a Luxury Collection Hotel",
-    desc: "The Historic San Antonio Property Combines Old World Glamour with Contemporary",
+      "Choice Hotels Expands in Kansas City with The Atrium, a Boutique Hotel Experience",
+    desc: "The Modern Kansas City Property Reflects Local Culture with Thoughtful Design and Comfor",
   },
 ];
 const PressReleaseSection = () => {
@@ -53,9 +53,9 @@ const PressReleaseSection = () => {
       <div className="common-heading">
         <p>Press Release</p>
         <h2>
-          Explore our news library for articles about{" "}
+          Discover the latest updates and media coverage on{" "}
           <span>
-            Crescent Hotels
+            Crescent
             <img
               src="/iconFiles/underline-heading.svg"
               alt="icon"
@@ -63,7 +63,7 @@ const PressReleaseSection = () => {
               height={20}
             />
           </span>{" "}
-          & Resorts.
+          Hotels & Resorts in our comprehensive news library.
         </h2>
       </div>
       <div className="mt-5">
