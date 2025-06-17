@@ -17,10 +17,11 @@ const AdvantageSection = () => {
             Expertise. Innovation. Results
           </h2>
           <p>
-            Foxtcon Hospitality combines industry expertise with forward-thinking strategy,
-            delivering tailored hotel management solutions for branded and independent properties.
-            Our hands-on executive team brings bold ideas, operational excellence, and a sharp
-            focus on performance to every partnership.
+            Foxtcon Hospitality combines industry expertise with
+            forward-thinking strategy, delivering tailored hotel management
+            solutions for branded and independent properties. Our hands-on
+            executive team brings bold ideas, operational excellence, and a
+            sharp focus on performance to every partnership.
           </p>
         </div>
         <div className="row">

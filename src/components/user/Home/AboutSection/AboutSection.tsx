@@ -10,7 +10,7 @@ const AboutSection = () => {
             <div className="common-heading">
               <p>Our Culture. Your Future.</p>
               <h2>
-                What {" "}
+                What{" "}
                 <span>
                   Inspires
                   <img
@@ -27,15 +27,14 @@ const AboutSection = () => {
             </div>
             <div className="description">
               <p>
-                At Foxtcon Hospitality, your career is more than a job—it’s a journey
-                filled with purpose, growth, and possibility.
-                Whether you're joining us at the corporate level, on property,
-                or through an internship, you’ll thrive in dynamic environments that spark curiosity,
-                foster collaboration, and celebrate connection.
+                At Foxtcon Hospitality, your career is more than a job—it’s a
+                journey filled with purpose, growth, and possibility. Whether
+                you re joining us at the corporate level, on property, or
+                through an internship, you’ll thrive in dynamic environments
+                that spark curiosity, foster collaboration, and celebrate
+                connection.
               </p>
-              <p>
-                We’re passionate about people—and that starts with you.
-              </p>
+              <p>We’re passionate about people—and that starts with you.</p>
             </div>
             <div className="btn-wrapper">
               <button>Join Our Team</button>

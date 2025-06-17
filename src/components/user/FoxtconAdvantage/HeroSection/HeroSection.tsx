@@ -19,9 +19,7 @@ const HeroSection = () => {
       <div className="container hero-content">
         <h1>
           The Foxtcon Advantage,
-          <span>
-            Intelligent Hospitality, Elevated by Expertise
-          </span>
+          <span>Intelligent Hospitality, Elevated by Expertise</span>
         </h1>
       </div>
     </div>

@@ -17,7 +17,11 @@ const MapSection = () => {
             />
           </span>{" "}
         </h2>
-        <p>With teams and offices across the globe, Foxtcon Hospitality is always within reach. Whether you’re looking to partner, collaborate, or simply say hello—we’re here and ready to connect</p>
+        <p>
+          With teams and offices across the globe, Foxtcon Hospitality is always
+          within reach. Whether you’re looking to partner, collaborate, or
+          simply say hello—we’re here and ready to connect
+        </p>
       </div>
       <div className="map-container">
         <img src="/images/map-1.png" alt="" />

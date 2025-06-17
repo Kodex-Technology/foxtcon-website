@@ -3,7 +3,7 @@ import "./Hero.scss";
 const HeroSection = () => {
   return (
     <div className="career-hero-wrapper">
-       <video
+      <video
         autoPlay
         muted
         loop

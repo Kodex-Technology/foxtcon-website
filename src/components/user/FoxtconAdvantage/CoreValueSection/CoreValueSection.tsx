@@ -40,9 +40,7 @@ const CoreValueSection = () => {
             />
           </span>
         </h2>
-        <h2>
-          Built by Hoteliers. Driven by Excellence
-        </h2>
+        <h2>Built by Hoteliers. Driven by Excellence</h2>
       </div>
       <div className="content-overlay">
         <div className="content-col ">
@@ -79,9 +77,7 @@ const CoreValueSection = () => {
                     onClick={() => setActiveTab(index)}
                   >
                     {tab.title}
-                    <span>
-                      {tab.subTitle}
-                    </span>
+                    <span>{tab.subTitle}</span>
                   </button>
                 ))}
               </div>

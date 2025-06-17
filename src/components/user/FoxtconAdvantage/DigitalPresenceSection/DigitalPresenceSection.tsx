@@ -24,13 +24,16 @@ const DigitalPresenceSection = () => {
             Smart Visibility, Seamless Impact
           </h2>
           <p>
-            Foxtcon Hospitality empowers brands with a full-spectrum digital marketing approach
-            designed to captivate, convert, and grow. From expertly crafted websites and advanced
-            SEO to precision-targeted campaigns, dynamic social media management, and integrated CRM
-            solutions—we ensure your brand stands out in a competitive digital landscape.
+            Foxtcon Hospitality empowers brands with a full-spectrum digital
+            marketing approach designed to captivate, convert, and grow. From
+            expertly crafted websites and advanced SEO to precision-targeted
+            campaigns, dynamic social media management, and integrated CRM
+            solutions—we ensure your brand stands out in a competitive digital
+            landscape.
             <br />
-            Our strategies are built to elevate visibility, deepen customer engagement,
-            and drive sustainable business growth across every digital touchpoint.
+            Our strategies are built to elevate visibility, deepen customer
+            engagement, and drive sustainable business growth across every
+            digital touchpoint.
           </p>
         </div>
       </div>

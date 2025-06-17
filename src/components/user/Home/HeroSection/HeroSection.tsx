@@ -19,8 +19,6 @@ const HeroSection = () => {
       <div className="overlay"></div>
       <div className="container hero-content">
         <h1>
-
-
           Foxtcon <span>Hospitality</span> <br /> Elevating Hotels,
           <span> Empowering </span> Growth.
         </h1>

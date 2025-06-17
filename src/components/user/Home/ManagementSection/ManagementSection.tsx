@@ -4,7 +4,7 @@ import {
   RoomIcon,
   DiningIcon,
   TeamMembersIcon,
-  RenovationProjectIcon
+  RenovationProjectIcon,
 } from "@/svgs";
 import "./Management.scss";
 const ManagementSection = () => {
@@ -13,7 +13,7 @@ const ManagementSection = () => {
       <div className="management-col">
         <div className="common-heading">
           <h2>
-            Foxtcon Hospitality: Inspired Management. {" "}
+            Foxtcon Hospitality: Inspired Management.{" "}
             <span>
               Exceptional{" "}
               <img
@@ -22,8 +22,8 @@ const ManagementSection = () => {
                 width={20}
                 height={20}
               />
-            </span>
-            {" "}Growth
+            </span>{" "}
+            Growth
           </h2>
         </div>
         <div className="description">

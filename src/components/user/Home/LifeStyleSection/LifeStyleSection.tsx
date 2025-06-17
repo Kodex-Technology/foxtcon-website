@@ -34,11 +34,13 @@ const LifeStyleSection = () => {
         </div>
         <div className="description">
           <p>
-            We are storytellers and taste-chasers. Experience Kansas City’s
-            bold blend of history, flavor, and creativity—where iconic culture meets modern discovery.
+            We are storytellers and taste-chasers. Experience Kansas City’s bold
+            blend of history, flavor, and creativity—where iconic culture meets
+            modern discovery.
           </p>
           <p>
-            From smoky jazz to sizzling BBQ, every corner invites you to live louder and travel deeper.
+            From smoky jazz to sizzling BBQ, every corner invites you to live
+            louder and travel deeper.
           </p>
           {/* <p>
             {showMore ? section.description : truncateText(section.description)}
@@ -48,9 +50,7 @@ const LifeStyleSection = () => {
           {/* <button onClick={() => setShowMore((prev) => !prev)}>
             {showMore ? "Show Less" : "Learn More"}
           </button> */}
-          <button>
-            Learn More
-          </button>
+          <button>Learn More</button>
         </div>
       </div>
     </div>
