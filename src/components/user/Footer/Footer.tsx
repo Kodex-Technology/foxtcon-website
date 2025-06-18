@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { WebsiteRoutes } from "@/constant/appRoutes";
 import {
   FacebookIcon,
   InstagramIcon,
@@ -16,12 +17,14 @@ const Footer = () => {
       <div className="container footer-container">
         <div className="footer-col">
           <div className="logo-wrapper">
-            <Image
-              src="/iconFiles/foxtcon-color-logo.svg"
-              alt="logo"
-              width={100}
-              height={40}
-            />
+            <Link href={WebsiteRoutes.HOME}>
+              <Image
+                src="/iconFiles/foxtcon-color-logo.svg"
+                alt="logo"
+                width={100}
+                height={40}
+              />
+            </Link>
           </div>
           <div className="description-wrapper">
             {" "}
@@ -60,19 +63,19 @@ const Footer = () => {
           <div className="footer-links">
             <ul>
               <li>
-                <Link href="#">
+                <Link href={WebsiteRoutes.FOXTCON_ADVANTAGE}>
                   <CarretRightIcon />
                   Foxtcon Advantage
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href={WebsiteRoutes.MANAGEMENT_SERVICE}>
                   <CarretRightIcon />
                   Management Services
                 </Link>
               </li>
               <li>
-                <Link href="#">
+                <Link href={WebsiteRoutes.PORTFOLIO}>
                   <CarretRightIcon />
                   Portfolio
                 </Link>

@@ -10,12 +10,12 @@ const PortfolioPage = () => {
   return (
     <div className="portfolio-page-wrapper">
       <HeroSection />
+      <PortfolioSection showHeading={true} />
       <div className="container">
-        <PortfolioSection showHeading={true} />
         <TeamSection />
         <SuccessStorieSection />
-        <MapSection />
       </div>
+      <MapSection />
     </div>
   );
 };

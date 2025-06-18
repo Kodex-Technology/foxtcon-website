@@ -1,5 +1,34 @@
 @use "../../../../styles/variables.scss" as *;
 @use "../../../../styles/mixin.scss" as *;
+.core-value-fluid {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffb11a 0%, white 80%);
+    right: -40%;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+  }
+  &::before {
+    content: "";
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fa7f71 0%, white 80%);
+    left: -30%;
+    bottom: 0%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+  }
+}
 .core-value-wrapper {
   padding-top: 5.5rem;
   display: flex;
@@ -93,6 +122,9 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
+            @include mobile {
+              grid-template-columns: repeat(1, 1fr);
+            }
             button {
               display: flex;
               flex-direction: column;
@@ -104,7 +136,7 @@
               font-weight: 400;
               position: relative;
               border: none;
-
+              height: fit-content;
               &.active,
               &:hover {
                 color: #fda704;
@@ -116,7 +148,7 @@
                   height: 1px;
                   background: #fda704;
                   position: absolute;
-                  bottom: 0;
+                  bottom: -2px;
                   left: 0;
                 }
               }
@@ -190,6 +222,9 @@
               font-weight: 700;
               padding-left: 105px;
               min-height: 35px;
+              @include mobile {
+                font-size: 24px;
+              }
             }
             p {
               font-size: 16px;

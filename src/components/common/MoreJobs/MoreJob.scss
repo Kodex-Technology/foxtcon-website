@@ -1,0 +1,141 @@
+@use "../../../styles/variables.scss" as *;
+@use "../../../styles/mixin.scss" as *;
+.job-post-grid {
+  .job-post-card {
+    display: flex;
+    border-top: 1px solid #d9d9d9;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    @include desktop {
+      flex-direction: column;
+    }
+    .content-col {
+      &:nth-of-type(1) {
+        width: 30%;
+        @include desktop {
+          width: 100%;
+        }
+      }
+      &:nth-of-type(2) {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @include desktop {
+          width: 100%;
+        }
+      }
+      .job-post-title {
+        h1 {
+          font-size: 24px;
+          color: black;
+          font-weight: 700;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+          span {
+            font-size: 18px;
+            font-weight: 400;
+            @include mobile {
+              font-size: 16px;
+            }
+          }
+          @include mobile {
+            font-size: 22px;
+          }
+        }
+      }
+      .job-description-card {
+        border: 1px solid #d9d9d9;
+        padding: 1rem;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background: white;
+        .card-header {
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+          align-items: flex-start;
+          h1 {
+            color: #2d2d2e;
+            font-weight: 700;
+            font-size: 22px;
+            max-width: calc(100% - 150px);
+            @include mobile {
+              font-size: 20px;
+            }
+          }
+          p {
+            display: flex;
+            gap: 10px;
+            color: #000000;
+            font-size: 14px;
+            align-items: center;
+            img {
+              width: 30px;
+              height: 30px;
+              min-width: 30px;
+              border-radius: 50%;
+              object-fit: cover;
+            }
+          }
+        }
+        .card-body {
+          p {
+            color: #555555;
+            font-size: 16px;
+          }
+        }
+        .card-footer {
+          display: flex;
+          justify-content: space-between;
+          gap: 1rem;
+          align-items: center;
+          .time-box {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            @include mobile {
+              flex-direction: column;
+              gap: 0.5rem;
+            }
+            p {
+              white-space: nowrap;
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              font-size: 14px;
+              @include mobile {
+                font-size: 12px;
+              }
+            }
+          }
+          .btn-wrapper {
+            button {
+              background: transparent;
+              border-color: #0e53e2;
+              color: #0e53e2;
+              transition: all 0.5s;
+              border: 1px solid #0e53e2;
+              padding: 8px 15px;
+              border-radius: 10px;
+              font-size: 14px;
+              overflow: hidden;
+              min-width: 100px;
+              &:hover {
+                box-shadow:
+                  inset 10em 0 0 0 #0e53e2,
+                  inset -10em 0 0 0 #0e53e2;
+                border-color: #0e53e2;
+                color: white;
+                border: 1px solid #0e53e2;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

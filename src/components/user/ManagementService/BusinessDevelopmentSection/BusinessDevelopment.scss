@@ -1,5 +1,22 @@
 @use "../../../../styles/variables.scss" as *;
 @use "../../../../styles/mixin.scss" as *;
+.business-development-fluid {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    width: 50%;
+    height: 100%;
+    background: radial-gradient(#fa7f71 0%, white 80%);
+    left: 0%;
+    top: 0%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.16;
+  }
+}
 .business-development-wrapper {
   padding-top: 5.5rem;
   display: flex;

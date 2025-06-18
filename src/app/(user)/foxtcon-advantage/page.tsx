@@ -15,20 +15,16 @@ const FoxtconAdvantagePage = () => {
   return (
     <div className="foxtcon-advantage-page-wrapper">
       <HeroSection />
-      <div className="container">
-        <CoreValueSection />
-      </div>
+      <CoreValueSection />
       <CommunitySection />
       <div className="container">
         <TeamSection />
       </div>
       <AdvantageSection />
-      <div className="container">
-        <DigitalPresenceSection />
-        <GlobalConnectionSection />
-        <PressReleaseSection />
-        <MapSection />
-      </div>
+      <DigitalPresenceSection />
+      <GlobalConnectionSection />
+      <PressReleaseSection />
+      <MapSection />
     </div>
   );
 };

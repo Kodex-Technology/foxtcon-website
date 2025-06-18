@@ -1,5 +1,22 @@
 @use "../../../../styles/variables.scss" as *;
 @use "../../../../styles/mixin.scss" as *;
+.global-connection-fluid {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    border-radius: 40%;
+    background: radial-gradient(circle, #ffb11a 0%, white 80%);
+    right: -40%;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+  }
+}
 .global-connection-wrapper {
   display: flex;
   align-items: center;

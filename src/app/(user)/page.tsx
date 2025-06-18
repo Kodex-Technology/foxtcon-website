@@ -13,17 +13,13 @@ const HomePage = () => {
   return (
     <div className="home-page-wrapper">
       <HeroSection />
-      <div className="container">
-        <ManagementSection />
-        <PortfolioSection />
-        <BrandSection />
-        <PressReleaseSection />
-        <LifeStyleSection />
-      </div>
+      <ManagementSection />
+      <PortfolioSection />
+      <BrandSection />
+      <PressReleaseSection />
+      <LifeStyleSection />
       <AboutSection />
-      <div className="container">
-        <MapSection />
-      </div>
+      <MapSection />
     </div>
   );
 };

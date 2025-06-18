@@ -60,34 +60,38 @@ const PortfolioSection = ({ showHeading }: PortfolioProps) => {
     router.push(WebsiteRoutes.PORTFOLIO);
   };
   return (
-    <div className="portfolio-wrapper">
-      {!showHeading && (
-        <div className="common-heading">
-          <h2>
-            <span>
-              Portfolio
-              <img src="/iconFiles/underline-heading.svg" alt="icon" />
-            </span>
-          </h2>
-        </div>
-      )}
+    <div className="container-fluid portfolio-fluid px-0">
+      <div className="container">
+        <div className="portfolio-wrapper">
+          {!showHeading && (
+            <div className="common-heading">
+              <h2>
+                <span>
+                  Portfolio
+                  <img src="/iconFiles/underline-heading.svg" alt="icon" />
+                </span>
+              </h2>
+            </div>
+          )}
 
-      <div className="row mt-5">
-        {portfolioData.map((item, idx) => (
-          <div className="col-md-6 col-lg-4 mb-3" key={idx}>
-            <PortfolioCard
-              image={item.image}
-              title={item.title}
-              location={item.location}
-            />
+          <div className="row mt-5">
+            {portfolioData.map((item, idx) => (
+              <div className="col-md-6 col-lg-4 mb-3" key={idx}>
+                <PortfolioCard
+                  image={item.image}
+                  title={item.title}
+                  location={item.location}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-      {!showHeading && (
-        <div className="btn-wrapper">
-          <button onClick={goToPage}>See More</button>
+          {!showHeading && (
+            <div className="btn-wrapper">
+              <button onClick={goToPage}>See More</button>
+            </div>
+          )}
         </div>
-      )}
+      </div>
     </div>
   );
 };
