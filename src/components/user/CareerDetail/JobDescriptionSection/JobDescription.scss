@@ -1,3 +1,34 @@
+@use "../../../../styles/variables.scss" as *;
+@use "../../../../styles/mixin.scss" as *;
+.job-detail-fluid {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #ffb11a 0%, white 80%);
+    right: -50%;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+  }
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 20%;
+    background: radial-gradient(circle, #fa7f71 0%, white 80%);
+    left: -50%;
+    bottom: 0%;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+  }
+}
 .job-detail-wrapper {
   display: flex;
   flex-direction: column;
@@ -9,6 +40,9 @@
     margin: 0 auto;
     h2 {
       font-size: 32px;
+      @include mobile {
+        font-size: 28px;
+      }
     }
     img {
       margin-bottom: -13px;
@@ -17,13 +51,22 @@
   .job-detail-container {
     display: flex;
     gap: 1rem;
+    @include tablet {
+      flex-direction: column;
+    }
     .content-col {
       &:nth-of-type(1) {
         width: 70%;
+        @include tablet {
+          width: 100%;
+        }
       }
       &:nth-of-type(2) {
         width: 30%;
         min-width: 350px;
+        @include tablet {
+          width: 100%;
+        }
       }
       .job-description-col {
         display: flex;
@@ -65,6 +108,7 @@
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+        background: white;
         .job-highlight {
           display: flex;
           justify-content: space-between;

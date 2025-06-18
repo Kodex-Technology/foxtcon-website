@@ -14,15 +14,15 @@ const ManagementServicePage = () => {
   return (
     <div className="management-service-page-wrapper">
       <HeroSection />
+      <OverviewSection />
+      <BusinessDevelopmentSection />
+      <OperationSection />
+      <RevenueGenerationSection />
+      <ConceptDevelopmentSection />
       <div className="container">
-        <OverviewSection />
-        <BusinessDevelopmentSection />
-        <OperationSection />
-        <RevenueGenerationSection />
-        <ConceptDevelopmentSection />
         <SuccessStorieSection />
-        <MapSection />
       </div>
+      <MapSection />
     </div>
   );
 };

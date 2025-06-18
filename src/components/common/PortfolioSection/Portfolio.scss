@@ -1,5 +1,22 @@
 @use "../../../styles/variables.scss" as *;
 @use "../../../styles/mixin.scss" as *;
+.portfolio-fluid {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle, #fa7f71 0%, white 80%);
+    left: -50%;
+    top: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.08;
+  }
+}
 .portfolio-wrapper {
   padding-top: 5.5rem;
   .common-heading {

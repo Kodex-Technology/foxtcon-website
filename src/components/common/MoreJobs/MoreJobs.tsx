@@ -1,12 +1,14 @@
 import React from "react";
 import JobPostCard from "../JobPostCard/JobPostCard";
+import "./MoreJob.scss";
 const jobPostData = [
   {
-    title: "Project Managers",
-    subtitle: "Open positions in our managing team.",
+    title: "Project Managers ",
+    subtitle:
+      "Open positions in our managing team. Open positions in our managing team.",
     jobs: [
       {
-        position: "Project Manager",
+        position: "Project Manager ",
         location: "Kansas City, USA",
         description:
           "We’re looking for a mid-level project manager to join our team",

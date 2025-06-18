@@ -14,18 +14,22 @@ const JobPostSection = ({
   headingClass = "",
 }: JobPostSectionProps) => {
   return (
-    <div className="job-post-wrapper">
-      <div className={`common-heading ${headingClass}`}>
-        <h2>
-          {headingTitle}{" "}
-          <span>
-            {headingHighlight}
-            <img src="/iconFiles/underline-heading.svg" alt="icon" />
-          </span>
-        </h2>
-        <p>{headingSubtitle}</p>
+    <div className="container-fluid px-0 job-post-fluid">
+      <div className="container">
+        <div className="job-post-wrapper">
+          <div className={`common-heading ${headingClass}`}>
+            <h2>
+              {headingTitle}{" "}
+              <span>
+                {headingHighlight}
+                <img src="/iconFiles/underline-heading.svg" alt="icon" />
+              </span>
+            </h2>
+            <p>{headingSubtitle}</p>
+          </div>
+          <MoreJobs />
+        </div>
       </div>
-      <MoreJobs />
     </div>
   );
 };
