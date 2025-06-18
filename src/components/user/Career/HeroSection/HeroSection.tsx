@@ -18,8 +18,7 @@ const HeroSection = () => {
       <div className="overlay"></div>
       <div className="container hero-content">
         <h1>
-          Expert Management{' '}
-          <span>Exceptional Outcomes</span>
+          Expert Management <span>Exceptional Outcomes</span>
         </h1>
       </div>
     </div>
