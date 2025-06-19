@@ -57,7 +57,27 @@ p {
     }
   }
 }
+
 //advantages
 .video-bg::-webkit-media-controls {
   display: none !important;
+}
+// super-admin-layout-content
+.super-admin-layout-content {
+  min-height: 100vh;
+  background: #fff9f9;
+  padding-top: 80px;
+  padding-left: 80px;
+  transition: all 0.3s;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+//common-title
+.common-title {
+  h2 {
+    color: #2d2d2e;
+    font-weight: 700;
+    font-size: 20px;
+  }
 }
