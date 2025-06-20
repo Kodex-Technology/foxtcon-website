@@ -1,0 +1,15 @@
+.custom-menu {
+  background: white;
+  border-radius: 10px !important;
+  min-width: 120px !important;
+  ul {
+    padding: 0;
+    li {
+      color: #2d2d2e;
+      font-size: 14px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #eff0f5;
+      }
+    }
+  }
+}

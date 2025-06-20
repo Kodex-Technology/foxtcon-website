@@ -3,9 +3,11 @@ import React, { useState } from "react";
 import "./page.scss";
 import PaymentChart from "@/components/superadmin/Dashboard/PaymentChart/PaymentChart";
 import StatsCard from "@/components/superadmin/Dashboard/StatsCard/StatsCard";
+import AverageOrganizationChart from "@/components/superadmin/Dashboard/AverageOrganizationChart/AverageOrganizationChart";
+import MapView from "@/components/superadmin/Dashboard/MapView/MapView";
 const DashboardPage = () => {
   const [filter, setFilter] = useState<"Monthly" | "Weekly" | "Yearly">(
-    "Monthly",
+    "Monthly"
   );
 
   const dataSets = {
@@ -58,16 +60,23 @@ const DashboardPage = () => {
   };
 
   const { series, categories } = dataSets[filter];
+  const averageResult = 76;
   return (
     <div className="container-fluid">
-      <div className="dashboard-summary">
-        <StatsCard />
-        <PaymentChart
-          filter={filter}
-          onFilterChange={setFilter}
-          series={series}
-          categories={categories}
-        />
+      <div className="dashboard-page-wrapper">
+        <div className="dashboard-summary">
+          <StatsCard />
+          <PaymentChart
+            filter={filter}
+            onFilterChange={setFilter}
+            series={series}
+            categories={categories}
+          />
+        </div>
+        <div className="dashboard-overview">
+          <MapView />
+          <AverageOrganizationChart value={averageResult} />
+        </div>
       </div>
     </div>
   );
