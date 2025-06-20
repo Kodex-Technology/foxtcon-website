@@ -1,0 +1,111 @@
+.confirmation-modal {
+  .modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .custom-modal-header {
+    img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: contain;
+    }
+  }
+  .custom-modal-body {
+    display: flex;
+    justify-content: center;
+    p {
+      color: #2d2d2e;
+      font-size: 18px;
+      text-align: center;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .custom-modal-footer {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    button {
+      max-width: 150px;
+      width: 100%;
+      border: none;
+      outline: none;
+      height: 40px;
+      border-radius: 10px;
+      font-size: 14px;
+      background: transparent;
+      text-transform: capitalize;
+      &.delete {
+        background: #ff3532;
+        color: white;
+        background: #ff3532;
+        border-color: #ff3532;
+        white-space: nowrap;
+        color: white;
+        transition: all 0.5s;
+        border: 1px solid #ff3532;
+        padding: 10px 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        svg {
+          width: 18px;
+        }
+        &:hover {
+          background: white;
+          color: #ff3532;
+          box-shadow:
+            0 0 8px #ff3532,
+            0 0 15px #ff3532;
+          border-color: #ff3532;
+          svg {
+            path {
+              stroke: #ff3532;
+            }
+          }
+        }
+      }
+      &.deactivate,
+      &.suspend {
+        background: #0e53e2;
+        color: white;
+        background: #0e53e2;
+        border-color: #0e53e2;
+        white-space: nowrap;
+        color: white;
+        transition: all 0.5s;
+        border: 1px solid #0e53e2;
+        padding: 10px 15px;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        svg {
+          width: 18px;
+        }
+        &:hover {
+          background: white;
+          color: #0e53e2;
+          box-shadow:
+            0 0 8px #0e53e2,
+            0 0 15px #0e53e2;
+          border-color: #0e53e2;
+          svg {
+            path {
+              stroke: #0e53e2;
+            }
+          }
+        }
+      }
+      &.cancel {
+        color: #2d2d2e;
+      }
+    }
+  }
+}

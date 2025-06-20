@@ -1,0 +1,55 @@
+.map-wrapper {
+  width: 100%;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .common-title {
+    p {
+      font-size: 16px;
+      color: #2d2d2e;
+      span {
+        color: #0e53e2;
+        font-weight: 700;
+        font-size: 18px;
+      }
+    }
+  }
+  .map-box {
+    max-width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .map-legend {
+    background: #f9fafe;
+    border-radius: 30px;
+    padding: 10px 15px;
+    display: flex;
+    gap: 1rem;
+    width: fit-content;
+    .legend-col {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      gap: 10px;
+      div {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        min-width: 10px;
+        background: #7ca2ee;
+      }
+      span {
+        font-size: 12px;
+        color: #555555;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.pagination-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  .pagination-control {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    button {
+      background: #0e53e2;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 10px;
+      width: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        width: 10px;
+      }
+      &:disabled {
+        opacity: 0.6;
+      }
+    }
+    p {
+      font-size: 13px;
+      color: #2d2d2e;
+    }
+  }
+  .pagination-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    p {
+      color: #2d2d2e;
+      font-size: 13px;
+      font-weight: 400;
+      span {
+        color: #0e53e2;
+        font-weight: 500;
+      }
+    }
+    select {
+      border: 1px solid #eff0f5;
+      border-radius: 10px;
+      height: 30px;
+      font-size: 12px;
+      color: #2d2d2e;
+      box-shadow: none;
+      outline: none;
+    }
+  }
+}
