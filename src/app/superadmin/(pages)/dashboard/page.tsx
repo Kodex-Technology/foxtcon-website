@@ -7,7 +7,7 @@ import AverageOrganizationChart from "@/components/superadmin/Dashboard/AverageO
 import MapView from "@/components/superadmin/Dashboard/MapView/MapView";
 const DashboardPage = () => {
   const [filter, setFilter] = useState<"Monthly" | "Weekly" | "Yearly">(
-    "Monthly"
+    "Monthly",
   );
 
   const dataSets = {
