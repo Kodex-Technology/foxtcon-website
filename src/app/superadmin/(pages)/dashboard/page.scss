@@ -1,150 +1,26 @@
+.dashboard-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 .dashboard-summary {
   display: flex;
   gap: 1rem;
   .stats-card-wrapper {
     width: 40%;
-    .stats-card {
-      background: white;
-      border-radius: 10px;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-      height: 100%;
-      .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 1rem;
-        h3 {
-          color: #2d2d2e;
-          font-size: 14px;
-          font-weight: 700;
-        }
-        button {
-          background: transparent;
-          border: none;
-          outline: none;
-          box-shadow: none;
-          width: fit-content;
-          svg {
-            width: 18px;
-          }
-        }
-      }
-      .card-body {
-        display: flex;
-        gap: 10px;
-        align-items: flex-end;
-        justify-content: space-between;
-        svg {
-          width: 60px;
-          min-width: 60px;
-        }
-        h2 {
-          color: #2d2d2e;
-          font-size: 32px;
-          font-weight: 700;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          max-width: 100%;
-          display: block;
-        }
-      }
-    }
   }
-  .stats-chart-wrapper {
+  .bar-chart-wrapper {
     width: 60%;
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    .chart-header {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      align-items: center;
-      .common-title {
-        display: flex;
-        gap: 15px;
-        span {
-          color: #9b9b9b;
-          font-size: 12px;
-          font-weight: 400;
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          white-space: nowrap;
-          &:nth-of-type(1) {
-            border-left: 1px solid #e4e4e4;
-            padding-left: 15px;
-          }
-          div {
-            width: 10px;
-            height: 10px;
-            min-width: 10px;
-            border-radius: 50%;
-            &.net-profit {
-              background: #7ca2ee;
-            }
-            &.gross-profit {
-              background: #ecf3f7;
-            }
-          }
-        }
-      }
-      .filter {
-        position: relative;
-        select {
-          background: #0e53e2;
-          border-color: #0e53e2;
-          color: white;
-          border-radius: 10px;
-          min-width: 100px;
-          border: none;
-          outline: none;
-          height: 40px;
-          appearance: none;
-          -webkit-appearance: none;
-          -moz-appearance: none;
-          padding: 0 25px 0 10px;
-          font-size: 14px;
-        }
-        svg {
-          position: absolute;
-          right: 10px;
-          top: 50%;
-          transform: translateY(-50%);
-          pointer-events: none;
-          width: 12px;
-          path {
-            stroke: white;
-          }
-        }
-      }
-    }
-    .earning-stat {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      padding-top: 10px;
-      svg {
-        width: 20px;
-      }
-      h3 {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        span {
-          color: #a3a3a3;
-          font-size: 12px;
-          font-weight: 400;
-        }
-        color: #1e1e1e;
-        font-size: 16px;
-        font-weight: 700;
-      }
-    }
+  }
+}
+.dashboard-overview {
+  display: flex;
+  gap: 1rem;
+  .map-wrapper {
+    width: calc(100% - 450px);
+  }
+  .pie-chart-wrapper {
+    width: 450px;
+    min-width: 450px;
   }
 }

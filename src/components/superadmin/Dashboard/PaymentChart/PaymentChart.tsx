@@ -3,6 +3,7 @@ import React from "react";
 import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
 import { DropDownIcon, ChartEarningIcon } from "@/svgs";
+import "./PaymentChart.scss";
 const ReactApexChart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
@@ -66,7 +67,7 @@ const PaymentChart: React.FC<PaymentChartProps> = ({
   };
 
   return (
-    <div className="stats-chart-wrapper">
+    <div className="bar-chart-wrapper">
       <div className="chart-header">
         <div className="common-title">
           <h2>Payment Overview</h2>

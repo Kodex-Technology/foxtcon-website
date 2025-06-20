@@ -81,3 +81,24 @@ p {
     font-size: 20px;
   }
 }
+// no-data-available
+.no-data-available {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 3rem 1rem;
+  &.table-no-data {
+    svg {
+      width: 100px;
+    }
+  }
+  p {
+    color: #4b5563;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: 0.15px;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
