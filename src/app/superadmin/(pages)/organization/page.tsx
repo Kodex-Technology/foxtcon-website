@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import Table from "react-bootstrap/Table";
+
 import "./page.scss";
-import { DotsIcon, AddIcon, NoDataIcon } from "@/svgs";
-import Form from "react-bootstrap/Form";
+
 import { organizationData } from "@/data/organizationData";
 import PaginationControl from "@/components/superadmin/common/Pagination/PaginationControl";
 import ActionMenu from "@/components/superadmin/common/ActionMenu/ActionMenu";
