@@ -4,7 +4,8 @@ export const chatData = [
     name: "Christina Schultz",
     company: "Kodex Tech",
     date: "12-20-2024",
-    message: "oetfri De port fjrn Wajdjj Leroum ispism is dummy oetfri De port fjrn W...",
+    message:
+      "oetfri De port fjrn Wajdjj Leroum ispism is dummy oetfri De port fjrn W...",
     unreadCount: 2,
     isActive: true,
     messages: [
@@ -13,44 +14,44 @@ export const chatData = [
         text: "Hi Taylor! I'm unable to upload files to the system",
         time: "09:30 AM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Thanks for the details, Sam. Let me verify the settings.",
         time: "09:30 AM",
         sender: "me",
-        seen: true
+        seen: true,
       },
       {
         id: 3,
         text: "Are you using the web or mobile app?",
         time: "09:30 AM",
         sender: "me",
-        seen: true
+        seen: true,
       },
       {
         id: 4,
         text: "Web browser, on Chrome.",
         time: "09:30 AM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 5,
         text: "Got it! There was a temporary glitch... could you try again now?",
         time: "09:30 AM",
         sender: "me",
-        seen: false
+        seen: false,
       },
       {
         id: 6,
         text: "It worked! The file uploaded perfectly. Thanks!",
         time: "09:30 AM",
         sender: "user",
-        seen: false
-      }
-    ]
+        seen: false,
+      },
+    ],
   },
   {
     id: 2,
@@ -66,23 +67,23 @@ export const chatData = [
         text: "Hello! Please review the report and let me know your thoughts.",
         time: "10:15 AM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "I'll review it by EOD and share my feedback.",
         time: "10:30 AM",
         sender: "me",
-        seen: true
+        seen: true,
       },
       {
         id: 3,
         text: "Great, looking forward to it!",
         time: "10:31 AM",
         sender: "user",
-        seen: true
-      }
-    ]
+        seen: true,
+      },
+    ],
   },
   {
     id: 3,
@@ -98,16 +99,16 @@ export const chatData = [
         text: "Meeting scheduled for tomorrow at 10 AM.",
         time: "11:45 AM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Got it. I've added it to my calendar.",
         time: "11:50 AM",
         sender: "me",
-        seen: false
-      }
-    ]
+        seen: false,
+      },
+    ],
   },
   {
     id: 4,
@@ -123,23 +124,23 @@ export const chatData = [
         text: "Can we reschedule our call to next week?",
         time: "02:20 PM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Sure, how about Wednesday at 2 PM?",
         time: "02:25 PM",
         sender: "me",
-        seen: true
+        seen: true,
       },
       {
         id: 3,
         text: "That works for me. See you then!",
         time: "02:26 PM",
         sender: "user",
-        seen: true
-      }
-    ]
+        seen: true,
+      },
+    ],
   },
   {
     id: 5,
@@ -155,16 +156,16 @@ export const chatData = [
         text: "Figma designs are ready for your review.",
         time: "09:00 AM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Thanks! I'll check them out this afternoon.",
         time: "09:05 AM",
         sender: "me",
-        seen: false
-      }
-    ]
+        seen: false,
+      },
+    ],
   },
   {
     id: 6,
@@ -180,16 +181,16 @@ export const chatData = [
         text: "Project Alpha is now live on staging.",
         time: "04:30 PM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Awesome! I'll run some tests.",
         time: "04:35 PM",
         sender: "me",
-        seen: true
-      }
-    ]
+        seen: true,
+      },
+    ],
   },
   {
     id: 7,
@@ -205,16 +206,16 @@ export const chatData = [
         text: "We need to finalize the UI/UX by Friday.",
         time: "03:10 PM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Understood. I'll prioritize the feedback.",
         time: "03:15 PM",
         sender: "me",
-        seen: false
-      }
-    ]
+        seen: false,
+      },
+    ],
   },
   {
     id: 8,
@@ -230,16 +231,16 @@ export const chatData = [
         text: "Invoice has been sent for this month's work.",
         time: "10:00 AM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Received. Payment will be processed by Friday.",
         time: "10:05 AM",
         sender: "me",
-        seen: true
-      }
-    ]
+        seen: true,
+      },
+    ],
   },
   {
     id: 9,
@@ -255,16 +256,16 @@ export const chatData = [
         text: "Let's connect over Zoom for the final walkthrough.",
         time: "01:30 PM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Sure, I'm available tomorrow after 3 PM.",
         time: "01:35 PM",
         sender: "me",
-        seen: false
-      }
-    ]
+        seen: false,
+      },
+    ],
   },
   {
     id: 10,
@@ -280,15 +281,15 @@ export const chatData = [
         text: "Updated documentation has been uploaded.",
         time: "11:20 AM",
         sender: "user",
-        seen: true
+        seen: true,
       },
       {
         id: 2,
         text: "Perfect, this will help with onboarding.",
         time: "11:25 AM",
         sender: "me",
-        seen: true
-      }
-    ]
-  }
+        seen: true,
+      },
+    ],
+  },
 ];

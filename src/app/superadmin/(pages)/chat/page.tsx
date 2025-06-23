@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState } from "react";
 import "./page.scss";
 import { chatData } from "@/data/chatData";
@@ -22,14 +22,9 @@ const ChatPage = () => {
           <ChatHeader user={selectedUser} />
           <div className="chat-body">
             {selectedUser?.messages?.map((msg) => (
-              <MsgItem
-                key={msg.id}
-                msg={msg}
-                selectedUser={selectedUser}
-              />
+              <MsgItem key={msg.id} msg={msg} selectedUser={selectedUser} />
             ))}
           </div>
-
         </div>
       </div>
     </div>

@@ -1,10 +1,8 @@
-
-
 interface Message {
   id: number;
   text: string;
   time: string;
-  sender:  string;
+  sender: string;
   seen: boolean;
 }
 
@@ -16,7 +14,7 @@ export interface ChatItem {
   message: string;
   unreadCount: number;
   isActive: boolean;
-  messages?: Message[];  
+  messages?: Message[];
 }
 
 export interface ChatListProps {
@@ -39,5 +37,3 @@ export interface MsgItemProps {
   msg: Message;
   selectedUser: ChatItem;
 }
-
-
