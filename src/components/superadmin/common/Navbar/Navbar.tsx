@@ -37,7 +37,7 @@ const Navbar = () => {
           <img src="/iconFiles/foxtcon-color-logo.svg" alt="logo" />
         </div>
         <div className="content-wrapper">
-          <Breadcrumbs pathname={pathname} />
+          <Breadcrumbs />
           <div className="header-actions">
             <div className="notification-btn">
               <button>
@@ -90,7 +90,10 @@ const Navbar = () => {
             aria-label="Main Navigation"
           >
             {menuItems.map(({ label, path, icon: Icon }) => (
-              <li key={label} className={pathname === path ? "active" : ""}>
+              <li
+                key={label}
+                className={path && pathname.startsWith(path) ? "active" : ""}
+              >
                 <Link href={path}>
                   <div className="icon-wrapper">
                     <Icon />

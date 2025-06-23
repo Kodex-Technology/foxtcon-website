@@ -40,7 +40,7 @@ const ConfirmationModal: React.FC<ConfirmationModalProps> = ({
         <div className="custom-modal-body">
           <p>
             {message ||
-              `Are you sure you want to ${capitalize(actionType)} this item?`}
+              `Are you sure you want to ${capitalize(actionType)} this organization?`}
           </p>
         </div>
         <div className="custom-modal-footer">

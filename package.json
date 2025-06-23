@@ -22,6 +22,8 @@
     "react-apexcharts": "^1.7.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.0.0",
+    "react-dropzone": "^14.3.8",
+    "react-phone-input-2": "^2.15.1",
     "sass": "^1.89.1",
     "swiper": "^11.2.8"
   },
