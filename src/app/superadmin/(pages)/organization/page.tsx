@@ -1,8 +1,6 @@
 "use client";
 import React, { useState } from "react";
-
 import "./page.scss";
-
 import { organizationData } from "@/data/organizationData";
 import PaginationControl from "@/components/superadmin/common/Pagination/PaginationControl";
 import ActionMenu from "@/components/superadmin/common/ActionMenu/ActionMenu";
@@ -11,7 +9,10 @@ import StatsCard from "@/components/superadmin/Organization/StatsCard/StatsCard"
 import ConfirmationModal from "@/components/superadmin/common/ConfirmationModal/ConfirmationModal";
 import OrganizationFilter from "@/components/superadmin/Organization/OrganizationFilter/OrganizationFilter";
 import OrganizationTable from "@/components/superadmin/Organization/OrganizationTable/OrganizationTable";
+import { useRouter } from "next/navigation";
+import { SuperAdminRoutes } from "@/constant/appRoutes";
 const OrganizationPage = () => {
+  const router = useRouter();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [menuRow, setMenuRow] = useState<number | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -32,7 +33,9 @@ const OrganizationPage = () => {
     const row = organizationData[rowIndex];
     console.log("Action:", action);
     console.log("ID:", row.id);
-    if (["delete", "deactivate", "suspend"].includes(action)) {
+    if (action === "view") {
+      router.push(`${SuperAdminRoutes.ORGANIZATION}/${row.id}`);
+    } else if (["delete", "deactivate", "suspend"].includes(action)) {
       setSelectedAction(action);
       setSelectedRowIndex(rowIndex);
       setShowConfirmationModal(true);
@@ -72,7 +75,9 @@ const OrganizationPage = () => {
     }
     setShowConfirmationModal(false);
   };
-
+  const goToAddPage = () => {
+    router.push(SuperAdminRoutes.ORGANIZATION_ADD);
+  };
   return (
     <>
       <div className="container-fluid">
@@ -80,12 +85,14 @@ const OrganizationPage = () => {
           <StatsCard />
           <div className="table-wrapper">
             <OrganizationFilter
+              title="Organization"
               filterStatus={filterStatus}
               onFilterChange={(status) => {
                 setFilterStatus(status);
                 setCurrentPage(1);
               }}
-              onAddClick={() => console.log("Add clicked")}
+              onAddClick={goToAddPage}
+              statusOptions={["All", "Active", "Inactive", "Suspended"]}
             />
             <div className="table-container">
               <OrganizationTable

@@ -2,20 +2,24 @@ import React from "react";
 import { AddIcon } from "@/svgs";
 
 interface Props {
+  title: string;
   filterStatus: string;
   onFilterChange: (status: string) => void;
   onAddClick?: () => void;
+  statusOptions: string[];
 }
 
 const OrganizationFilter: React.FC<Props> = ({
+  title,
   filterStatus,
   onFilterChange,
   onAddClick,
+  statusOptions,
 }) => {
   return (
     <div className="table-header">
       <div className="common-title">
-        <h2>Organization</h2>
+        <h2>{title}</h2>
       </div>
       <div className="table-btn">
         <select
@@ -23,15 +27,18 @@ const OrganizationFilter: React.FC<Props> = ({
           value={filterStatus}
           onChange={(e) => onFilterChange(e.target.value)}
         >
-          <option value="All">All</option>
-          <option value="Active">Active</option>
-          <option value="Inactive">Inactive</option>
-          <option value="Suspended">Suspended</option>
+          {statusOptions.map((status) => (
+            <option key={status} value={status}>
+              {status}
+            </option>
+          ))}
         </select>
-        <button onClick={onAddClick}>
-          <AddIcon />
-          Add Organization
-        </button>
+        {onAddClick && (
+          <button onClick={onAddClick}>
+            <AddIcon />
+            Add Organization
+          </button>
+        )}
       </div>
     </div>
   );

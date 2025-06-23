@@ -1,0 +1,32 @@
+.react-tel-input {
+  .form-control {
+    padding-left: 42px !important;
+  }
+  .country-list {
+    &::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+    }
+    max-height: 280px;
+    .search {
+      padding: 0;
+      .search-emoji {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+        width: 20px;
+      }
+      .search-box {
+        width: 100%;
+        margin: 0;
+        padding-left: 35px;
+        border-left: none !important;
+        border-right: none !important;
+        border-top: 1px solid #e5e8ee !important;
+        border-bottom: 1px solid #e5e8ee !important;
+        border-radius: 0;
+      }
+    }
+  }
+}
