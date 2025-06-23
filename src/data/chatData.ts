@@ -176,20 +176,6 @@ export const chatData = [
     unreadCount: 0,
     isActive: false,
     messages: [
-      {
-        id: 1,
-        text: "Project Alpha is now live on staging.",
-        time: "04:30 PM",
-        sender: "user",
-        seen: true,
-      },
-      {
-        id: 2,
-        text: "Awesome! I'll run some tests.",
-        time: "04:35 PM",
-        sender: "me",
-        seen: true,
-      },
     ],
   },
   {
