@@ -24,7 +24,7 @@ const OrganizationPage = () => {
 
   const handleMenuOpen = (
     event: React.MouseEvent<HTMLElement>,
-    rowIndex: number
+    rowIndex: number,
   ) => {
     setAnchorEl(event.currentTarget);
     setMenuRow(rowIndex);
@@ -47,7 +47,7 @@ const OrganizationPage = () => {
     filterStatus === "All"
       ? organizationData
       : organizationData.filter(
-          (org) => org.status.toLowerCase() === filterStatus.toLowerCase()
+          (org) => org.status.toLowerCase() === filterStatus.toLowerCase(),
         );
 
   const totalEntries = filteredData.length;

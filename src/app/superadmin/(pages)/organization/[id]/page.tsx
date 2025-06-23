@@ -36,7 +36,7 @@ const OrganizationDetailPage = () => {
 
     console.log(
       `Confirmed ${selectedAction} for organization ID:`,
-      organizationId
+      organizationId,
     );
 
     switch (selectedAction) {
@@ -61,7 +61,8 @@ const OrganizationDetailPage = () => {
     filterStatus === "All"
       ? employeeData
       : employeeData.filter(
-          (org) => org.employeeType.toLowerCase() === filterStatus.toLowerCase()
+          (org) =>
+            org.employeeType.toLowerCase() === filterStatus.toLowerCase(),
         );
 
   const totalEntries = filteredData.length;
