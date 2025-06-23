@@ -421,7 +421,21 @@ const AddOrganizationPage = () => {
                 </p>
               </div>
               <div className="form-wrapper">
-                <div className="row">
+                <div className="feature-grid">
+                  {featuresList.map(({ key, label, icon }) => (
+                    <div className="form-field" key={key}>
+                      <button
+                        className={`feature-btn ${formData.features.includes(key) ? "selected" : ""}`}
+                        onClick={() => toggleFeature(key)}
+                        type="button"
+                      >
+                        {icon} {label}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+
+                {/* <div className="row">
                   {featuresList.map(({ key, label, icon }) => (
                     <div className="col-lg-6 col-xl-3 mb-3" key={key}>
                       <div className="form-field">
@@ -435,7 +449,7 @@ const AddOrganizationPage = () => {
                       </div>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             </div>
           )}
