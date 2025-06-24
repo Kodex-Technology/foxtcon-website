@@ -5,6 +5,8 @@ import React from "react";
 
 const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
   const messageDate = new Date(msg.timestamp);
+  const currentYear = new Date().getFullYear();
+  const messageYear = messageDate.getFullYear();
   return (
     <div className="message-container">
       {showDateDivider && (
@@ -17,7 +19,9 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
               ? "Today"
               : isYesterday(messageDate)
                 ? "Yesterday"
-                : format(messageDate, "MMMM d, yyyy")}
+                : messageYear === currentYear
+                  ? format(messageDate, "MMMM d")
+                  : format(messageDate, "MMMM d, yyyy")}
           </span>
         </div>
       )}

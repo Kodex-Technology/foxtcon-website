@@ -1,0 +1,49 @@
+.chat-footer-wrapper {
+  background: #fff;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  .chat-input {
+    width: 100%;
+    textarea {
+      width: 100%;
+      min-height: 42px;
+      max-height: 100px;
+      overflow-y: auto;
+      padding: 0.5rem;
+      resize: none;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      box-shadow: none;
+    }
+  }
+  .chat-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: space-between;
+    padding: 0 0.5rem;
+    .upload-wrapper {
+      input {
+        display: none;
+      }
+    }
+    button {
+      background: #0e53e2;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.disable {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

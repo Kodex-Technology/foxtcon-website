@@ -285,7 +285,6 @@
             background: #e4e4e4;
             border-radius: 1rem;
           }
-
           span {
             font-size: 12px;
             font-weight: 400;
@@ -301,6 +300,10 @@
           }
         }
       }
+    }
+    .no-data-available {
+      background: #f9fafe;
+      flex: 1;
     }
   }
 }
