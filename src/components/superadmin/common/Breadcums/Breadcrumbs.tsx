@@ -21,6 +21,7 @@ const formatCrumbLabel = (segment: string, prev?: string): string => {
   if (isDynamicSegment(segment)) {
     if (prev === "organization") return "View Organization";
     if (prev === "add") return "Add Organization";
+
     return "Details";
   }
 
@@ -29,11 +30,19 @@ const formatCrumbLabel = (segment: string, prev?: string): string => {
 
 // For title at top
 const formatTitleLabel = (segments: string[]): string => {
-  if (segments.includes("organization") && isDynamicSegment(segments.at(-1)!)) {
+  const last = segments.at(-1);
+  const prev = segments.at(-2);
+
+  if (last === "edit") {
+    if (prev === "privacy-policy") return "Privacy Policy";
+    if (prev === "term-condition") return "Terms & Conditions";
+  }
+
+  if (segments.includes("organization") && isDynamicSegment(last!)) {
     return "Organization";
   }
-  const last = segments.at(-1);
-  return formatCrumbLabel(last || "", segments.at(-2));
+
+  return formatCrumbLabel(last || "", prev);
 };
 
 const Breadcrumbs: React.FC = () => {

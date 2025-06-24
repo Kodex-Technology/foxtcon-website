@@ -70,7 +70,8 @@
         }
       }
       &.deactivate,
-      &.suspend {
+      &.suspend,
+      &.done {
         background: #0e53e2;
         color: white;
         background: #0e53e2;

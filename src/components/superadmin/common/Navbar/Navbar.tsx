@@ -29,7 +29,9 @@ const Navbar = () => {
   const handleNavbarToggle = () => {
     setOpenSidebar(!openSidebar);
   };
-
+  const goToChatPage = () => {
+    route.push(SuperAdminRoutes.CHAT);
+  };
   return (
     <>
       <div className="superadmin-topbar">
@@ -40,7 +42,7 @@ const Navbar = () => {
           <Breadcrumbs />
           <div className="header-actions">
             <div className="notification-btn">
-              <button>
+              <button onClick={goToChatPage}>
                 <ChatIcon />
               </button>
               <button>

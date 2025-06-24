@@ -1,18 +1,36 @@
 "use client";
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import { FeatureUploadIcon, CloseIcon } from "@/svgs";
+interface ImageDropzoneProps {
+  initialUrl?: string;
+  onUpload?: (url: string) => void;
+  onRemove?: () => void;
+}
 
-const ImageDropzone = () => {
+const ImageDropzone = ({
+  onUpload,
+  onRemove,
+  initialUrl,
+}: ImageDropzoneProps) => {
   const [preview, setPreview] = useState<string | null>(null);
-
-  const onDrop = useCallback((acceptedFiles: File[]) => {
-    const file = acceptedFiles[0];
-    const previewUrl = URL.createObjectURL(file);
-    setPreview(previewUrl);
-
-    //api call
-  }, []);
+  useEffect(() => {
+    if (initialUrl) {
+      setPreview(initialUrl);
+    }
+  }, [initialUrl]);
+  const onDrop = useCallback(
+    (acceptedFiles: File[]) => {
+      const file = acceptedFiles[0];
+      const previewUrl = URL.createObjectURL(file);
+      setPreview(previewUrl);
+      if (onUpload) {
+        onUpload(previewUrl);
+      }
+      //api call
+    },
+    [onUpload],
+  );
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
@@ -21,7 +39,11 @@ const ImageDropzone = () => {
     },
     multiple: false,
   });
-
+  const handleRemove = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setPreview(null);
+    onRemove?.();
+  };
   return (
     <div {...getRootProps()} className="upload-wrapper">
       <input {...getInputProps()} />
@@ -31,10 +53,7 @@ const ImageDropzone = () => {
             <img src={preview} alt="Uploaded Preview" className="" />
             <button
               type="button"
-              onClick={(e) => {
-                e.stopPropagation();
-                setPreview(null);
-              }}
+              onClick={handleRemove}
               className="close-img-preview"
             >
               <CloseIcon />
