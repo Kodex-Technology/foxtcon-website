@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { geistSans, geistMono } from "@/fonts";
 import "@/styles/global.scss";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const metadata: Metadata = {
   title: "Foxtcon",
@@ -18,7 +20,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <ToastContainer />
+        {children}
+      </body>
     </html>
   );
 }

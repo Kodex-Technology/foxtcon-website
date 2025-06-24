@@ -13,5 +13,7 @@ export enum SuperAdminRoutes {
   CHAT = "/superadmin/chat",
   SUBSCRIPTION_PLAN = "/superadmin/subscription-plan",
   PRIVACY_POLICY = "/superadmin/privacy-policy",
+  PRIVACY_POLICY_EDIT = "/superadmin/privacy-policy/edit",
   TERM_CONDITION = "/superadmin/term-condition",
+  TERM_CONDITION_EDIT = "/superadmin/term-condition/edit",
 }

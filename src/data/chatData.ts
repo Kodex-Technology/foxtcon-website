@@ -175,8 +175,7 @@ export const chatData = [
     message: "Project Alpha is now live on staging.",
     unreadCount: 0,
     isActive: false,
-    messages: [
-    ],
+    messages: [],
   },
   {
     id: 7,
