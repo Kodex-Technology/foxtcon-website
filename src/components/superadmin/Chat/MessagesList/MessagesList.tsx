@@ -3,6 +3,7 @@ import { isSameDay, isToday, isYesterday, format } from "date-fns";
 import { NoDataIcon } from "@/svgs";
 import MsgItem from "../MsgItem/MsgItem";
 import { ChatItem, Message } from "@/types/chat";
+import { useEffect, useRef } from "react";
 
 interface MessagesListProps {
     messages: Message[];
@@ -10,6 +11,17 @@ interface MessagesListProps {
 }
 
 const MessagesList = ({ messages, selectedUser }: MessagesListProps) => {
+
+    const messagesEndRef = useRef<HTMLDivElement>(null);
+
+    const scrollToBottom = () => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
+    useEffect(() => {
+        scrollToBottom();
+    }, [messages]);
+
     if (!messages || messages.length === 0) {
         return (
             <div className="no-data-available">
@@ -34,6 +46,7 @@ const MessagesList = ({ messages, selectedUser }: MessagesListProps) => {
                     />
                 );
             })}
+            <div ref={messagesEndRef} />
         </div>
     );
 };

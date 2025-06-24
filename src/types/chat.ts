@@ -4,7 +4,7 @@ export interface Message {
   time: string;
   sender: string;
   seen: boolean;
-   timestamp: string;
+  timestamp: string;
 }
 
 export interface ChatItem {
@@ -37,5 +37,20 @@ export interface ChatHeaderProps {
 export interface MsgItemProps {
   msg: Message;
   selectedUser: ChatItem;
-   showDateDivider: boolean;
+  showDateDivider: boolean;
+}
+
+
+export interface SelectedFile {
+  url: string;
+  type: 'image' | 'file';
+  file: File;
+}
+
+export interface ChatFooterProps {
+    onUploadFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    fileInputRef: React.RefObject<HTMLInputElement | null>; 
+    selectedFiles: SelectedFile[];
+    removeImagePreview: (index: number) => void;
+    showFilePreview: boolean;
 }
