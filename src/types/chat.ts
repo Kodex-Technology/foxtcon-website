@@ -1,9 +1,10 @@
-interface Message {
+export interface Message {
   id: number;
   text: string;
   time: string;
   sender: string;
   seen: boolean;
+   timestamp: string;
 }
 
 export interface ChatItem {
@@ -14,7 +15,7 @@ export interface ChatItem {
   message: string;
   unreadCount: number;
   isActive: boolean;
-  messages?: Message[];
+  messages: Message[];
 }
 
 export interface ChatListProps {
@@ -36,4 +37,5 @@ export interface ChatHeaderProps {
 export interface MsgItemProps {
   msg: Message;
   selectedUser: ChatItem;
+   showDateDivider: boolean;
 }
