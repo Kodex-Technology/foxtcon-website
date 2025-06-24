@@ -2151,3 +2151,60 @@ export const FeatureUploadIcon = () => {
     </svg>
   );
 };
+
+
+
+export const SearchIcon = () => {
+  return (
+    <svg
+      width="21"
+      height="20"
+      viewBox="0 0 21 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.88635 16.667C14.0285 16.667 17.3864 13.3091 17.3864 9.16699C17.3864 5.02486 14.0285 1.66699 9.88635 1.66699C5.74422 1.66699 2.38635 5.02486 2.38635 9.16699C2.38635 13.3091 5.74422 16.667 9.88635 16.667Z"
+        stroke="#2D2D2E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M16.4946 17.2413C16.9363 18.5747 17.9446 18.708 18.7196 17.5413C19.428 16.4747 18.9613 15.5997 17.678 15.5997C16.728 15.5913 16.1946 16.333 16.4946 17.2413Z"
+        stroke="#2D2D2E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+
+};
+
+
+export const MsgSeenIcon = () => {
+  return (
+    <svg
+      width="20"
+      height="11"
+      viewBox="0 0 20 11"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 5.48486L10.2426 9.7275L18.727 1.24219M1 5.48486L5.24264 9.7275M13.7279 1.24219L10.5 4.4996"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+
+};
+
+
+
+
+
+
