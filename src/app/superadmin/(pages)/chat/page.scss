@@ -277,6 +277,14 @@
           align-items: center;
           justify-content: center;
           width: 100%;
+          position: relative;
+          padding: 1rem;
+          .divider-line {
+            width: 80%;
+            height: 1px;
+            background: #e4e4e4;
+            border-radius: 1rem;
+          }
 
           span {
             font-size: 12px;
@@ -285,26 +293,11 @@
             padding: 0.5rem 1rem;
             border: 1px solid #e4e4e4;
             border-radius: 1rem;
-            position: relative;
-
-            &::before,
-            &::after {
-              content: "";
-              position: absolute;
-              top: 50%;
-              width: 300%;
-              height: 1px;
-              background-color: #e4e4e4;
-              transform: translateY(-50%);
-            }
-
-            &::before {
-              right: 100%;
-            }
-
-            &::after {
-              left: 100%;
-            }
+            position: absolute;
+            background: #f9fafe;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
           }
         }
       }

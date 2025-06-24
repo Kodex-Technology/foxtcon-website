@@ -6,9 +6,12 @@ import React from "react";
 const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
   const messageDate = new Date(msg.timestamp);
   return (
-    <>
+    <div className="message-container">
       {showDateDivider && (
         <div className="message-divider">
+          <div className="divider-line">
+
+          </div>
           <span>
             {isToday(messageDate)
               ? "Today"
@@ -37,7 +40,7 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
           </span>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

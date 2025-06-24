@@ -20,12 +20,10 @@ const ChatPage = () => {
         />
         <div className="chat-msg-wrapper">
           <ChatHeader user={selectedUser} />
-          <div className="chat-body">
-            <MessagesList
-              messages={selectedUser.messages}
-              selectedUser={selectedUser}
-            />
-          </div>
+          <MessagesList
+            messages={selectedUser.messages}
+            selectedUser={selectedUser}
+          />
         </div>
       </div>
     </div>
