@@ -4,7 +4,8 @@ export const chatData = [
     name: "Christina Schultz",
     company: "Kodex Tech",
     date: "12-20-2024",
-    message: "oetfri De port fjrn Wajdjj Leroum ispism is dummy oetfri De port fjrn W...",
+    message:
+      "oetfri De port fjrn Wajdjj Leroum ispism is dummy oetfri De port fjrn W...",
     unreadCount: 2,
     isActive: true,
     messages: [

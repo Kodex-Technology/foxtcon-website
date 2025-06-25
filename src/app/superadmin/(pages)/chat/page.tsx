@@ -33,7 +33,6 @@ const ChatPage = () => {
     }
   };
 
-
   const removeImagePreview = (index: number) => {
     const updated = [...selectedFiles];
     updated.splice(index, 1);

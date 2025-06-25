@@ -9,23 +9,23 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
   const messageYear = messageDate.getFullYear();
 
   const getFileIconPath = (fileName: string): string => {
-    const ext = fileName.split('.').pop()?.toLowerCase() || '';
+    const ext = fileName.split(".").pop()?.toLowerCase() || "";
 
     switch (ext) {
-      case 'pdf':
-        return '/iconFiles/pdf-icon.svg';
-      case 'csv':
-        return '/iconFiles/csv-icon.svg';
-      case 'doc':
-      case 'docx':
-        return '/iconFiles/doc-icon.svg';
-      case 'xls':
-      case 'xlsx':
-        return '/iconFiles/excel-icon.svg';
-      case 'txt':
-        return '/iconFiles/text-icon.svg';
+      case "pdf":
+        return "/iconFiles/pdf-icon.svg";
+      case "csv":
+        return "/iconFiles/csv-icon.svg";
+      case "doc":
+      case "docx":
+        return "/iconFiles/doc-icon.svg";
+      case "xls":
+      case "xlsx":
+        return "/iconFiles/excel-icon.svg";
+      case "txt":
+        return "/iconFiles/text-icon.svg";
       default:
-        return '/iconFiles/unknow-file-icon.svg';
+        return "/iconFiles/unknow-file-icon.svg";
     }
   };
 
@@ -33,9 +33,7 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
     <div className="message-container">
       {showDateDivider && (
         <div className="message-divider">
-          <div className="divider-line">
-
-          </div>
+          <div className="divider-line"></div>
           <span>
             {isToday(messageDate)
               ? "Today"
@@ -71,11 +69,12 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
                         style={{ objectFit: "cover", borderRadius: "8px" }}
                       />
                     ) : (
-                      <a href={file.url} target="_blank" rel="noopener noreferrer">
-                        <img
-                          src={getFileIconPath(file.url)}
-                          alt="file icon"
-                        />
+                      <a
+                        href={file.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <img src={getFileIconPath(file.url)} alt="file icon" />
                       </a>
                     )}
                   </div>
