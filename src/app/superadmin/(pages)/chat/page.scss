@@ -233,14 +233,55 @@
                 object-fit: cover;
               }
             }
-            .message-text {
+            .message-content {
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
               background: #ffffff;
               border-radius: 12px;
               padding: 12px;
-              font-size: 0.9rem;
-              font-weight: 500;
-              color: #555555;
               box-shadow: 2px 2px 2px rgba(99, 99, 99, 0.2);
+              width: fit-content;
+              .attached-files-wrapper {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+                width: fit-content;
+                .attached-file-preview {
+                  border-radius: 0.75rem;
+                  width: 100px;
+                  height: 100px;
+                  img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 0.5rem;
+                    transition: transform 0.3s ease;
+                  }
+                  a {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1rem;
+                    width: 100%;
+                    height: 100%;
+                    background: #e5e7eb;
+                    border-radius: 0.5rem;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    img {
+                      width: 45px;
+                      height: 50px;
+                    }
+                  }
+                }
+              }
+              .message-text {
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: #555555;
+              }
             }
           }
           &.received {
@@ -248,22 +289,32 @@
             .time {
               padding-left: 2.5rem;
             }
-            .message-text {
+            .message-content {
               border-top-left-radius: 0px;
+              align-items: flex-start;
+              .attached-files-wrapper {
+                justify-content: flex-start;
+              }
             }
           }
           &.sent {
             justify-content: flex-end;
             align-items: flex-end;
-            .message-text {
+            .message-content {
               background: #e1eafd;
               border-top-right-radius: 0px;
-              color: #5c5d65;
+              align-items: flex-end;
+              .message-text {
+                color: #5c5d65;
+              }
+              .attached-files-wrapper {
+                justify-content: flex-end;
+              }
             }
           }
           .status {
             svg {
-              stroke: #5c5d65;
+              stroke: #656fb4;
             }
             &.seen {
               svg {

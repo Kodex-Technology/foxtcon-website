@@ -5,7 +5,7 @@ import "./imagepreview.scss";
 
 
 interface MultiImagePreviewProps {
-    selectedFiles: { url: string; type: 'image' | 'file' }[];
+    selectedFiles: { url: string; type: 'image' | 'file'; file: File }[];
     onRemoveFile: (index: number) => void;
 }
 
@@ -13,13 +13,27 @@ const ImagePreview = ({ selectedFiles, onRemoveFile }: MultiImagePreviewProps) =
 
     if (!selectedFiles.length) return null;
 
-    const getFileIcon = (fileUrl: string) => {
-        if (fileUrl.endsWith('.pdf')) return '/iconFiles/pdf-icon.svg';
-        if (fileUrl.endsWith('.csv')) return '/iconFiles/csv-icon.svg';
-        if (fileUrl.match(/\.(doc|docx)$/)) return '/iconFiles/doc-icon.svg';
-        if (fileUrl.match(/\.(xls|xlsx)$/)) return '/iconFiles/excel-icon.svg';
-        if (fileUrl.endsWith('.txt')) return '/iconFiles/text-icon.svg';
-        return '/iconFiles/unknow-file-icon.svg';
+    console.log('selected files', selectedFiles)
+
+    const getFileIcon = (file: File) => {
+        const ext = file.name.split('.').pop()?.toLowerCase() || '';
+
+        switch (ext) {
+            case 'pdf':
+                return '/iconFiles/pdf-icon.svg';
+            case 'csv':
+                return '/iconFiles/csv-icon.svg';
+            case 'doc':
+            case 'docx':
+                return '/iconFiles/doc-icon.svg';
+            case 'xls':
+            case 'xlsx':
+                return '/iconFiles/excel-icon.svg';
+            case 'txt':
+                return '/iconFiles/text-icon.svg';
+            default:
+                return '/iconFiles/unknow-file-icon.svg';
+        }
     };
 
     return (
@@ -40,14 +54,13 @@ const ImagePreview = ({ selectedFiles, onRemoveFile }: MultiImagePreviewProps) =
                     ) : (
                         <a href={file.url} target="_blank" rel="noopener noreferrer" className="file-link">
                             <img
-                                src={getFileIcon(file.url)}
+                                src={getFileIcon(file.file)}
                                 alt="File Icon"
                                 width={40}
                                 height={40}
                             />
                         </a>
                     )}
-
                 </div>
             ))}
         </div>

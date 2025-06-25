@@ -12,9 +12,12 @@ const ChatFooter = ({
     fileInputRef,
     selectedFiles,
     removeImagePreview,
-    showFilePreview
+    showFilePreview,
+    onSendMessage,
+    newMessage,
+    setNewMessage,
 }: ChatFooterProps) => {
-    const [newMessage, setNewMessage] = useState('');
+
     const textareaRef = useRef<HTMLTextAreaElement>(null);
 
     useEffect(() => {
@@ -28,9 +31,9 @@ const ChatFooter = ({
         setNewMessage(value);
 
         if (textareaRef.current) {
-            textareaRef.current.style.height = '40px';
+            textareaRef.current.style.height = "40px";
             const scrollHeight = textareaRef.current.scrollHeight;
-            textareaRef.current.style.height = Math.min(scrollHeight, 100) + 'px';
+            textareaRef.current.style.height = Math.min(scrollHeight, 100) + "px";
         }
     };
 
@@ -40,12 +43,13 @@ const ChatFooter = ({
                 <textarea
                     ref={textareaRef}
                     placeholder="Write your message here..."
+                    value={newMessage}
                     onChange={onMessageChange}
                 />
             </div>
             <div className="chat-actions">
-                <div className="upload-wrapper" >
-                    <label htmlFor="file-upload" style={{ cursor: "pointer" }}>
+                <div className="upload-wrapper" style={{ cursor: "pointer" }}>
+                    <label htmlFor="file-upload">
                         <UploadChatIcon />
                     </label>
                     <input
@@ -56,12 +60,15 @@ const ChatFooter = ({
                         ref={fileInputRef}
                     />
                 </div>
-                <button className='disable'>
+                <button onClick={onSendMessage}>
                     <SendIcon />
                 </button>
             </div>
             {showFilePreview && selectedFiles.length > 0 && (
-                <ImagePreview selectedFiles={selectedFiles} onRemoveFile={removeImagePreview} />
+                <ImagePreview
+                    selectedFiles={selectedFiles}
+                    onRemoveFile={removeImagePreview}
+                />
             )}
         </div>
     );
