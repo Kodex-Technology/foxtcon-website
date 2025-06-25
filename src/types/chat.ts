@@ -7,7 +7,7 @@ export interface Message {
   timestamp: string;
   files?: {
     url: string;
-    type: 'image' | 'file';
+    type: "image" | "file";
   }[];
 }
 
@@ -44,10 +44,9 @@ export interface MsgItemProps {
   showDateDivider: boolean;
 }
 
-
 export interface SelectedFile {
   url: string;
-  type: 'image' | 'file';
+  type: "image" | "file";
   file: File;
 }
 
