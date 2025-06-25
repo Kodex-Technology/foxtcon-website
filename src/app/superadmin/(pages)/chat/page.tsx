@@ -1,15 +1,73 @@
 "use client";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import "./page.scss";
 import { chatData } from "@/data/chatData";
 import ChatHeader from "@/components/superadmin/Chat/ChatHeader/ChatHeader";
-import { ChatItem } from "@/types/chat";
+import { ChatItem, SelectedFile } from "@/types/chat";
 import UserList from "@/components/superadmin/Chat/UserList/UserList";
-import MsgItem from "@/components/superadmin/Chat/MsgItem/MsgItem";
-import { NoDataIcon } from "@/svgs";
+import MessagesList from "@/components/superadmin/Chat/MessagesList/MessagesList";
+import ChatFooter from "@/components/superadmin/Chat/ChatFooter/ChatFooter";
 
 const ChatPage = () => {
   const [selectedUser, setSelectedUser] = useState<ChatItem>(chatData[0]);
+  const [selectedFiles, setSelectedFiles] = useState<SelectedFile[]>([]);
+  const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const [showFilePreview, setShowFilePreview] = useState<boolean>(false);
+  const [newMessage, setNewMessage] = useState<string>("");
+
+  const onUploadFile = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const files = Array.from(e.target.files || []);
+    if (files.length === 0) return;
+
+    const updatedFiles: SelectedFile[] = files.map((file) => ({
+      url: URL.createObjectURL(file),
+      type: file.type.startsWith("image/") ? "image" : "file",
+      file,
+    }));
+
+    setSelectedFiles((prev) => [...prev, ...updatedFiles]);
+    setShowFilePreview(true);
+
+    if (fileInputRef.current) {
+      fileInputRef.current.value = "";
+    }
+  };
+
+  const removeImagePreview = (index: number) => {
+    const updated = [...selectedFiles];
+    updated.splice(index, 1);
+    setSelectedFiles(updated);
+    if (updated.length === 0) setShowFilePreview(false);
+  };
+
+  const handleSendMessage = () => {
+    if (!newMessage.trim() && selectedFiles.length === 0) return;
+
+    const now = new Date();
+    const newMsg = {
+      id: Date.now(),
+      text: newMessage.trim(),
+      time: now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
+      sender: "me",
+      seen: false,
+      timestamp: now.toISOString(),
+      files: selectedFiles.map((f) => ({
+        url: f.url,
+        type: f.type,
+      })),
+    };
+
+    const updatedUser = {
+      ...selectedUser,
+      messages: [...selectedUser.messages, newMsg],
+    };
+
+    setSelectedUser(updatedUser);
+    setNewMessage("");
+    setSelectedFiles([]);
+    setShowFilePreview(false);
+    if (fileInputRef.current) fileInputRef.current.value = "";
+  };
 
   return (
     <div className="container-fluid">
@@ -21,18 +79,20 @@ const ChatPage = () => {
         />
         <div className="chat-msg-wrapper">
           <ChatHeader user={selectedUser} />
-          <div className="chat-body">
-            {selectedUser?.messages && selectedUser.messages.length > 0 ? (
-              selectedUser.messages?.map((msg) => (
-                <MsgItem key={msg.id} msg={msg} selectedUser={selectedUser} />
-              ))
-            ) : (
-              <div className="no-data-available">
-                <NoDataIcon />
-                <p>No messages yet</p>
-              </div>
-            )}
-          </div>
+          <MessagesList
+            messages={selectedUser.messages}
+            selectedUser={selectedUser}
+          />
+          <ChatFooter
+            onUploadFile={onUploadFile}
+            fileInputRef={fileInputRef}
+            selectedFiles={selectedFiles}
+            removeImagePreview={removeImagePreview}
+            showFilePreview={showFilePreview}
+            onSendMessage={handleSendMessage}
+            newMessage={newMessage}
+            setNewMessage={setNewMessage}
+          />
         </div>
       </div>
     </div>

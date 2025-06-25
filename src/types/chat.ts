@@ -1,9 +1,14 @@
-interface Message {
+export interface Message {
   id: number;
   text: string;
   time: string;
   sender: string;
   seen: boolean;
+  timestamp: string;
+  files?: {
+    url: string;
+    type: "image" | "file";
+  }[];
 }
 
 export interface ChatItem {
@@ -14,7 +19,7 @@ export interface ChatItem {
   message: string;
   unreadCount: number;
   isActive: boolean;
-  messages?: Message[];
+  messages: Message[];
 }
 
 export interface ChatListProps {
@@ -36,4 +41,22 @@ export interface ChatHeaderProps {
 export interface MsgItemProps {
   msg: Message;
   selectedUser: ChatItem;
+  showDateDivider: boolean;
+}
+
+export interface SelectedFile {
+  url: string;
+  type: "image" | "file";
+  file: File;
+}
+
+export interface ChatFooterProps {
+  onUploadFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  fileInputRef: React.RefObject<HTMLInputElement | null>;
+  selectedFiles: SelectedFile[];
+  removeImagePreview: (index: number) => void;
+  showFilePreview: boolean;
+  onSendMessage: () => void;
+  newMessage: string;
+  setNewMessage: React.Dispatch<React.SetStateAction<string>>;
 }
