@@ -9,4 +9,7 @@ export const MESSAGES = {
       "Please fill all required fields before submitting.",
     ADD_ORGANIZATION: "Your organization has been successfully added.",
   },
+  CHAT: {
+    DELETE_CHAT: "Are you sure you want to delete this chat?",
+  },
 };

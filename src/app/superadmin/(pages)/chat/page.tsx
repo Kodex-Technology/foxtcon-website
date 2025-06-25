@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, KeyboardEvent, useEffect } from "react";
 import "./page.scss";
 import { chatData } from "@/data/chatData";
 import ChatHeader from "@/components/superadmin/Chat/ChatHeader/ChatHeader";
@@ -39,7 +39,32 @@ const ChatPage = () => {
     setSelectedFiles(updated);
     if (updated.length === 0) setShowFilePreview(false);
   };
+  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
+  };
+  useEffect(() => {
+    const handleGlobalKeyDown: EventListener = (event) => {
+      const e = event as unknown as KeyboardEvent;
+      const isTextareaFocused = document.activeElement?.tagName === "TEXTAREA";
+      if (e.key === "Enter" && !e.shiftKey && !isTextareaFocused) {
+        e.preventDefault();
+        const hasText = newMessage.trim().length > 0;
+        const hasFiles = selectedFiles.length > 0;
 
+        if (hasText || hasFiles) {
+          handleSendMessage();
+        }
+      }
+    };
+    window.addEventListener("keydown", handleGlobalKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleGlobalKeyDown);
+    };
+  }, [newMessage, selectedFiles]);
   const handleSendMessage = () => {
     if (!newMessage.trim() && selectedFiles.length === 0) return;
 
@@ -92,6 +117,7 @@ const ChatPage = () => {
             onSendMessage={handleSendMessage}
             newMessage={newMessage}
             setNewMessage={setNewMessage}
+            onKeyDown={handleKeyDown}
           />
         </div>
       </div>

@@ -1,3 +1,4 @@
+import { KeyboardEvent } from "react";
 export interface Message {
   id: number;
   text: string;
@@ -59,4 +60,6 @@ export interface ChatFooterProps {
   onSendMessage: () => void;
   newMessage: string;
   setNewMessage: React.Dispatch<React.SetStateAction<string>>;
+  // onKeyDown: (e: React.KeyboardEvent<HTMLTextAreaElement>) => void;
+  onKeyDown: (e: KeyboardEvent<HTMLTextAreaElement>) => void;
 }
