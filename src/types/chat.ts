@@ -5,6 +5,10 @@ export interface Message {
   sender: string;
   seen: boolean;
   timestamp: string;
+  files?: {
+    url: string;
+    type: 'image' | 'file';
+  }[];
 }
 
 export interface ChatItem {
@@ -48,9 +52,12 @@ export interface SelectedFile {
 }
 
 export interface ChatFooterProps {
-    onUploadFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
-    fileInputRef: React.RefObject<HTMLInputElement | null>; 
-    selectedFiles: SelectedFile[];
-    removeImagePreview: (index: number) => void;
-    showFilePreview: boolean;
+  onUploadFile: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  fileInputRef: React.RefObject<HTMLInputElement | null>;
+  selectedFiles: SelectedFile[];
+  removeImagePreview: (index: number) => void;
+  showFilePreview: boolean;
+  onSendMessage: () => void;
+  newMessage: string;
+  setNewMessage: React.Dispatch<React.SetStateAction<string>>;
 }
