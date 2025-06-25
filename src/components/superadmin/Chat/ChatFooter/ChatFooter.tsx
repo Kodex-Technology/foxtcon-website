@@ -35,6 +35,8 @@ const ChatFooter = ({
         setNewMessage(value);
     };
 
+    const disable = newMessage.trim() === "" && selectedFiles.length === 0;
+
     return (
         <div className="chat-footer-wrapper">
             <div className="chat-input">
@@ -58,7 +60,11 @@ const ChatFooter = ({
                         ref={fileInputRef}
                     />
                 </div>
-                <button onClick={onSendMessage}>
+                <button
+                    onClick={onSendMessage}
+                    className={disable ? "disable" : ""}
+                    disabled={disable}
+                >
                     <SendIcon />
                 </button>
             </div>
