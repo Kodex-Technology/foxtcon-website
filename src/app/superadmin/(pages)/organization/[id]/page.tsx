@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import { DotsIcon, NoDataIcon } from "@/svgs";
+import { DotsIcon, NoDataIcon, CloseIcon } from "@/svgs";
 import "./page.scss";
 import Table from "react-bootstrap/Table";
-import Form from "react-bootstrap/Form";
 import { useParams } from "next/navigation";
 import { employeeData } from "@/data/employeeData";
 import PaginationControl from "@/components/superadmin/common/Pagination/PaginationControl";
@@ -11,6 +10,7 @@ import OrganizationFilter from "@/components/superadmin/Organization/Organizatio
 import ActionMenu from "@/components/superadmin/common/ActionMenu/ActionMenu";
 import { organizationDetailActions } from "@/constant/organizationActions";
 import ConfirmationModal from "@/components/superadmin/common/ConfirmationModal/ConfirmationModal";
+import { Modal } from "react-bootstrap";
 
 const OrganizationDetailPage = () => {
   const params = useParams();
@@ -20,6 +20,7 @@ const OrganizationDetailPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const [showConfirmationModal, setShowConfirmationModal] = useState(false);
+  const [showPlanModal, setShowPlanModal] = useState(false);
   const [selectedAction, setSelectedAction] = useState<string | null>(null);
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -129,6 +130,11 @@ const OrganizationDetailPage = () => {
                   50
                 </h2>
               </div>
+              <div className="organization-summary-col">
+                <button onClick={() => setShowPlanModal(true)}>
+                  View Plan
+                </button>
+              </div>
             </div>
             <ActionMenu
               anchorEl={anchorEl}
@@ -161,7 +167,6 @@ const OrganizationDetailPage = () => {
                     <th>Role</th>
                     <th>Joining Date</th>
                     <th>Status</th>
-                    <th>Turn</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -189,9 +194,6 @@ const OrganizationDetailPage = () => {
                               {item.status}
                             </span>
                           </div>
-                        </td>
-                        <td>
-                          <Form.Check type="switch" className="custom-switch" />
                         </td>
                       </tr>
                     ))
@@ -227,6 +229,23 @@ const OrganizationDetailPage = () => {
         onConfirm={handleConfirmAction}
         actionType={selectedAction || "delete"}
       />
+      <Modal
+        className="plan-detail-modal"
+        show={showPlanModal}
+        onHide={() => setShowPlanModal(false)}
+        centered
+      >
+        <Modal.Body>
+          <div className="custom-modal-header">
+            <button onClick={() => setShowPlanModal(false)}>
+              <CloseIcon />
+            </button>
+          </div>
+          <div className="custom-modal-body">
+            <p>Plan Detail</p>
+          </div>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };

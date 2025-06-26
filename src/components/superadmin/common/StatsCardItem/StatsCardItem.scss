@@ -9,6 +9,11 @@
   width: 100%;
   &.organizationStats {
     gap: 5px;
+    .card-header {
+      button {
+        display: none;
+      }
+    }
   }
   .card-header {
     display: flex;

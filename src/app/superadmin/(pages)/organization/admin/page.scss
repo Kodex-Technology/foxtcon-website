@@ -1,7 +1,4 @@
-.organization-detail-page-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+.admin-page-wrapper {
   .table-wrapper {
     background: white;
     border-radius: 10px;
@@ -98,7 +95,6 @@
               padding-bottom: 1rem;
               color: #2d2d2e;
               font-weight: 400;
-              vertical-align: middle;
               .checkbox {
                 display: flex;
                 align-items: center;
@@ -109,15 +105,10 @@
                 align-items: center;
                 gap: 5px;
                 img {
-                  width: 28px;
-                  height: 28px;
-                  min-width: 28px;
+                  width: 32px;
+                  height: 32px;
                   border-radius: 50%;
                 }
-              }
-              .phone,
-              .date {
-                white-space: nowrap;
               }
               .custom-switch {
                 .form-check-input {
@@ -163,152 +154,6 @@
             }
           }
         }
-      }
-    }
-  }
-}
-.organization-detail-wrapper {
-  background: white;
-  border-radius: 10px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  .header-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    align-items: center;
-    button {
-      width: fit-content;
-      background: transparent;
-      border: none;
-    }
-  }
-  .body-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    .organization-content {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      img {
-        width: 50px;
-        height: 50px;
-        min-width: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-      h2 {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        color: #2d2d2e;
-        font-weight: 700;
-        font-size: 16px;
-        span {
-          color: #555555;
-          font-size: 12px;
-          font-weight: 400;
-        }
-      }
-    }
-    .organization-status {
-      p {
-        background: #ebfbee;
-        border-radius: 5px;
-        color: #37b24d;
-        font-size: 12px;
-        padding: 6px 15px;
-        min-width: 80px;
-        text-align: center;
-      }
-    }
-  }
-  .footer-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    .organization-summary-col {
-      max-width: 20%;
-      h2 {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-        color: #2d2d2e;
-        font-weight: 700;
-        font-size: 14px;
-        span {
-          color: #555555;
-          font-size: 12px;
-          font-weight: 400;
-        }
-        img {
-          width: 32px;
-          height: 32px;
-          min-width: 32px;
-          border-radius: 5px;
-          object-fit: cover;
-        }
-      }
-      button {
-        background: #0e53e2;
-        border-color: #0e53e2;
-        white-space: nowrap;
-        color: white;
-        transition: all 0.5s;
-        border: 1px solid #0e53e2;
-        padding: 10px 15px;
-        border-radius: 10px;
-        font-size: 14px;
-        overflow: hidden;
-        width: 100%;
-        max-width: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        svg {
-          width: 18px;
-        }
-        &:hover {
-          background: rgba(14, 83, 226, 0.1);
-          color: #0e53e2;
-          box-shadow:
-            0 0 8px #0e53e2,
-            0 0 15px #0e53e2;
-          border-color: #0e53e2;
-          svg {
-            path {
-              stroke: #0e53e2;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-// plan-detail-modal
-.plan-detail-modal {
-  .modal-content {
-    position: relative;
-  }
-  .custom-modal-header {
-    button {
-      width: 25px;
-      height: 25px;
-      background: red;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: none;
-      position: absolute;
-      right: -5px;
-      top: -5px;
-      svg {
-        width: 12px;
       }
     }
   }

@@ -63,11 +63,19 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
                 {msg.files.map((file, idx) => (
                   <div key={idx} className="attached-file-preview">
                     {file.type === "image" ? (
-                      <img
-                        src={file.url}
-                        alt="attachment"
-                        style={{ objectFit: "cover", borderRadius: "8px" }}
-                      />
+                      <a
+                        href={file.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="image-link"
+                      >
+                        {" "}
+                        <img
+                          src={file.url}
+                          alt="attachment"
+                          style={{ objectFit: "cover", borderRadius: "8px" }}
+                        />
+                      </a>
                     ) : (
                       <a
                         href={file.url}

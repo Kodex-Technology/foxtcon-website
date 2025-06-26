@@ -1,7 +1,6 @@
 // components/Organization/OrganizationTable.tsx
 import React from "react";
 import Table from "react-bootstrap/Table";
-import Form from "react-bootstrap/Form";
 import { Organization } from "@/types/organization";
 import { NoDataIcon, DotsIcon } from "@/svgs";
 
@@ -27,7 +26,7 @@ const OrganizationTable: React.FC<Props> = ({ data, onMenuOpen }) => {
           <th>Location</th>
           <th>Reg Date</th>
           <th>Status</th>
-          <th>Turn</th>
+
           <th></th>
         </tr>
       </thead>
@@ -51,9 +50,7 @@ const OrganizationTable: React.FC<Props> = ({ data, onMenuOpen }) => {
                   <span className={row.status.toLowerCase()}>{row.status}</span>
                 </div>
               </td>
-              <td>
-                <Form.Check type="switch" className="custom-switch" />
-              </td>
+
               <td>
                 <div className="action-btn">
                   <button onClick={(e) => onMenuOpen(e, index)}>

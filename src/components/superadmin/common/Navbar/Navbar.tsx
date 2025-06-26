@@ -14,10 +14,12 @@ import { menuItems } from "@/constant/menuItem";
 import Breadcrumbs from "../Breadcums/Breadcrumbs";
 import { useRouter } from "next/navigation";
 import { SuperAdminRoutes } from "@/constant/appRoutes";
+import { useAppSelector } from "@/store/store";
 const Navbar = () => {
   const pathname = usePathname();
   const route = useRouter();
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const { user } = useAppSelector((state) => state.auth);
   const [showDropdown, setShowDropdown] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
   const toggleDropdown = () => {
@@ -50,8 +52,11 @@ const Navbar = () => {
               </button>
             </div>
             <div className="profile" ref={dropdownRef}>
-              <img src="/images/profile-1.jpg" alt="icon" />
-              <h2 className="ellipsis">John Smith</h2>
+              <img
+                src={user?.image ?? "images/Unknown_person.jpg"}
+                alt="icon"
+              />
+              <h2 className="ellipsis">{user?.name ?? ""}</h2>
               <div className="logout-btn">
                 <button onClick={toggleDropdown}>
                   <ChevronDownIcon />
