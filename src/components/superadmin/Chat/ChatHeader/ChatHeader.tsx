@@ -2,6 +2,7 @@ import { DotsIcon } from "@/svgs";
 import { ChatHeaderProps } from "@/types/chat";
 import React, { useRef, useState } from "react";
 import ConfirmationModal from "../../common/ConfirmationModal/ConfirmationModal";
+import { MESSAGES } from "@/constant/message";
 
 const ChatHeader = ({ user }: ChatHeaderProps) => {
   const dropdownRef = useRef<HTMLDivElement>(null);
@@ -55,6 +56,7 @@ const ChatHeader = ({ user }: ChatHeaderProps) => {
         onClose={handleCloseModal}
         onConfirm={handleConfirmDelete}
         actionType="delete"
+        message={MESSAGES.CHAT.DELETE_CHAT}
       />
     </>
   );

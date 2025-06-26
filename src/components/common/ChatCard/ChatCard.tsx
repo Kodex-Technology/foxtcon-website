@@ -14,10 +14,10 @@ const ChatCard = ({ chat, isSelected, onSelect }: ChatCardProps) => {
             <img src={`/images/profile-${chat.id}.jpg`} alt="img" />
             <span className={chat?.isActive ? "active" : ""}></span>
           </div>
-          <h2>
-            {chat.name}
-            <span>{chat.company}</span>
-          </h2>
+          <div className="chat-header-text">
+            <h2>{chat.name}</h2>
+            <p className="company">{chat.company}</p>
+          </div>
         </div>
         <p>{chat.date}</p>
       </div>

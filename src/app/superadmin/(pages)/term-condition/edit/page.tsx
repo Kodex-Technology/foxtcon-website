@@ -1,7 +1,18 @@
+"use client";
 import React from "react";
-
-const TermEditPage = () => {
-  return <div className="container-fluid">edit page</div>;
+import PolicyEditorPage from "@/components/superadmin/common/PolicyEditor/PolicyEditorPage";
+const TermConditionEditPage = () => {
+  const handleSave = (content: string) => {
+    // API call to save Terms and Conditions
+    console.log("Terms saved:", content);
+  };
+  return (
+    <PolicyEditorPage
+      title="Terms and Conditions"
+      initialContent="<p>Edit your terms and conditions here...</p>"
+      onSave={handleSave}
+    />
+  );
 };
 
-export default TermEditPage;
+export default TermConditionEditPage;
