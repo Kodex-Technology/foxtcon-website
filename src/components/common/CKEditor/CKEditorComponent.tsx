@@ -69,7 +69,7 @@ const CKEditorComponent = dynamic(
   {
     ssr: false,
     loading: () => <Loader />,
-  }
+  },
 );
 
 export default CKEditorComponent;

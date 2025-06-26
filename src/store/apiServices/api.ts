@@ -18,7 +18,7 @@ api.interceptors.request.use(
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 api.interceptors.response.use(
@@ -44,7 +44,7 @@ api.interceptors.response.use(
       console.error("Unexpected error:", error);
     }
     return Promise.reject(error);
-  }
+  },
 );
 
 export default api;

@@ -15,7 +15,7 @@ const AdminPage = () => {
     filterStatus === "All"
       ? userData
       : userData.filter(
-          (org) => org.status.toLowerCase() === filterStatus.toLowerCase()
+          (org) => org.status.toLowerCase() === filterStatus.toLowerCase(),
         );
 
   const totalEntries = filteredData.length;
