@@ -1,7 +1,6 @@
 // components/Organization/OrganizationTable.tsx
 import React from "react";
 import Table from "react-bootstrap/Table";
-import Form from "react-bootstrap/Form";
 import { Organization } from "@/types/organization";
 import { NoDataIcon, DotsIcon } from "@/svgs";
 

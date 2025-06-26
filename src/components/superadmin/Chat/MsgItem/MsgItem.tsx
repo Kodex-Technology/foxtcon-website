@@ -7,19 +7,7 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
   const messageDate = new Date(msg.timestamp);
   const currentYear = new Date().getFullYear();
   const messageYear = messageDate.getFullYear();
-  const handleImageClick = (dataUrl: string) => {
-    const newTab = window.open();
-    if (newTab) {
-      newTab.document.title = "Image Preview";
-      newTab.document.body.innerHTML = "";
-      const img = newTab.document.createElement("img");
-      img.src = dataUrl;
-      img.style.maxWidth = "100%";
-      newTab.document.body.appendChild(img);
-    } else {
-      console.log("Please allow pop-ups to view the image.");
-    }
-  };
+
   const getFileIconPath = (fileName: string): string => {
     const ext = fileName.split(".").pop()?.toLowerCase() || "";
 

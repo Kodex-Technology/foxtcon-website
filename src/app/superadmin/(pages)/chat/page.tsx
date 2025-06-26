@@ -39,32 +39,7 @@ const ChatPage = () => {
     setSelectedFiles(updated);
     if (updated.length === 0) setShowFilePreview(false);
   };
-  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === "Enter" && !e.shiftKey) {
-      e.preventDefault();
-      handleSendMessage();
-    }
-  };
-  useEffect(() => {
-    const handleGlobalKeyDown: EventListener = (event) => {
-      const e = event as unknown as KeyboardEvent;
-      const isTextareaFocused = document.activeElement?.tagName === "TEXTAREA";
-      if (e.key === "Enter" && !e.shiftKey && !isTextareaFocused) {
-        e.preventDefault();
-        const hasText = newMessage.trim().length > 0;
-        const hasFiles = selectedFiles.length > 0;
 
-        if (hasText || hasFiles) {
-          handleSendMessage();
-        }
-      }
-    };
-    window.addEventListener("keydown", handleGlobalKeyDown);
-
-    return () => {
-      window.removeEventListener("keydown", handleGlobalKeyDown);
-    };
-  }, [newMessage, selectedFiles]);
   const handleSendMessage = () => {
     if (!newMessage.trim() && selectedFiles.length === 0) return;
 
@@ -93,6 +68,32 @@ const ChatPage = () => {
     setShowFilePreview(false);
     if (fileInputRef.current) fileInputRef.current.value = "";
   };
+  const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      handleSendMessage();
+    }
+  };
+  useEffect(() => {
+    const handleGlobalKeyDown: EventListener = (event) => {
+      const e = event as unknown as KeyboardEvent;
+      const isTextareaFocused = document.activeElement?.tagName === "TEXTAREA";
+      if (e.key === "Enter" && !e.shiftKey && !isTextareaFocused) {
+        e.preventDefault();
+        const hasText = newMessage.trim().length > 0;
+        const hasFiles = selectedFiles.length > 0;
+
+        if (hasText || hasFiles) {
+          handleSendMessage();
+        }
+      }
+    };
+    window.addEventListener("keydown", handleGlobalKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleGlobalKeyDown);
+    };
+  }, [newMessage, selectedFiles, handleSendMessage]);
 
   return (
     <div className="container-fluid">
