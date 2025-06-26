@@ -2,6 +2,7 @@
 import React from "react";
 import { BuildingStructureIcon, UserStructureIcon } from "@/svgs";
 import StatsCardItem from "../../common/StatsCardItem/StatsCardItem";
+import { SuperAdminRoutes } from "@/constant/appRoutes";
 
 const StatsCard = () => {
   return (
@@ -12,7 +13,7 @@ const StatsCard = () => {
             title="Total Organization"
             count={500}
             icon={<BuildingStructureIcon />}
-            className="organizationStats"
+            navigateTo={SuperAdminRoutes.ORGANIZATION}
           />
         </div>
         <div className="col-lg-6 mb-3">
@@ -20,7 +21,7 @@ const StatsCard = () => {
             title="Active Organization"
             count={450}
             icon={<BuildingStructureIcon />}
-            className="organizationStats"
+            navigateTo={SuperAdminRoutes.ORGANIZATION}
           />
         </div>
         <div className="col-lg-6 mb-3 mb-lg-0">
@@ -28,7 +29,7 @@ const StatsCard = () => {
             title="Total User"
             count={50}
             icon={<UserStructureIcon />}
-            className="organizationStats"
+            navigateTo={SuperAdminRoutes.ORGANIZATION_USER}
           />
         </div>
         <div className="col-lg-6 mb-3 mb-lg-0">
@@ -36,7 +37,7 @@ const StatsCard = () => {
             title="Total Admin"
             count={300}
             icon={<UserStructureIcon />}
-            className="organizationStats"
+            navigateTo={SuperAdminRoutes.ORGANIZATION_ADMIN}
           />
         </div>
       </div>

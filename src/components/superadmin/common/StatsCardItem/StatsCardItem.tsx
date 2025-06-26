@@ -2,11 +2,13 @@
 import React from "react";
 import { NavigateIcon } from "@/svgs";
 import "./StatsCardItem.scss";
+import { useRouter } from "next/navigation";
 type StatsCardItemProps = {
   title: string;
   count: number;
   icon: React.ReactNode;
   className?: string;
+  navigateTo?: string;
 };
 
 const StatsCardItem: React.FC<StatsCardItemProps> = ({
@@ -14,12 +16,20 @@ const StatsCardItem: React.FC<StatsCardItemProps> = ({
   count,
   icon,
   className,
+  navigateTo,
 }) => {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    if (navigateTo) {
+      router.push(navigateTo);
+    }
+  };
   return (
     <div className={`stats-card ${className}`}>
       <div className="card-header">
         <h3>{title}</h3>
-        <button>
+        <button onClick={handleNavigation}>
           <NavigateIcon />
         </button>
       </div>
