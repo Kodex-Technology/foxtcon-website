@@ -7,7 +7,19 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
   const messageDate = new Date(msg.timestamp);
   const currentYear = new Date().getFullYear();
   const messageYear = messageDate.getFullYear();
-
+  const handleImageClick = (dataUrl: string) => {
+    const newTab = window.open();
+    if (newTab) {
+      newTab.document.title = "Image Preview";
+      newTab.document.body.innerHTML = "";
+      const img = newTab.document.createElement("img");
+      img.src = dataUrl;
+      img.style.maxWidth = "100%";
+      newTab.document.body.appendChild(img);
+    } else {
+      console.log("Please allow pop-ups to view the image.");
+    }
+  };
   const getFileIconPath = (fileName: string): string => {
     const ext = fileName.split(".").pop()?.toLowerCase() || "";
 
@@ -63,11 +75,19 @@ const MsgItem = ({ msg, selectedUser, showDateDivider }: MsgItemProps) => {
                 {msg.files.map((file, idx) => (
                   <div key={idx} className="attached-file-preview">
                     {file.type === "image" ? (
-                      <img
-                        src={file.url}
-                        alt="attachment"
-                        style={{ objectFit: "cover", borderRadius: "8px" }}
-                      />
+                      <a
+                        href={file.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="image-link"
+                      >
+                        {" "}
+                        <img
+                          src={file.url}
+                          alt="attachment"
+                          style={{ objectFit: "cover", borderRadius: "8px" }}
+                        />
+                      </a>
                     ) : (
                       <a
                         href={file.url}

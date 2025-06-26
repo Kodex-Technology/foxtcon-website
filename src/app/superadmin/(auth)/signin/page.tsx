@@ -29,7 +29,7 @@ const SgininPage = () => {
           </div>
           <div className="form-body">
             <div className="form-field">
-              <input type="text" name="" id="" placeholder="Name" />
+              <input type="email" name="" id="" placeholder="Email" />
             </div>
             <div className="form-field field-icon">
               <input

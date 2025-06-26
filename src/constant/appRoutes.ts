@@ -10,6 +10,8 @@ export enum SuperAdminRoutes {
   DASHBOARD = "/superadmin/dashboard",
   ORGANIZATION = "/superadmin/organization",
   ORGANIZATION_ADD = "/superadmin/organization/add",
+  ORGANIZATION_USER = "/superadmin/organization/user",
+  ORGANIZATION_ADMIN = "/superadmin/organization/admin",
   CHAT = "/superadmin/chat",
   SUBSCRIPTION_PLAN = "/superadmin/subscription-plan",
   PRIVACY_POLICY = "/superadmin/privacy-policy",

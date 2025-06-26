@@ -3,6 +3,7 @@ import { geistSans, geistMono } from "@/fonts";
 import "@/styles/global.scss";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ReduxProvider } from "@/store/provider/ReduxProvider";
 
 export const metadata: Metadata = {
   title: "Foxtcon",
@@ -22,7 +23,7 @@ export default function RootLayout({
     >
       <body suppressHydrationWarning>
         <ToastContainer />
-        {children}
+        <ReduxProvider>{children}</ReduxProvider>
       </body>
     </html>
   );

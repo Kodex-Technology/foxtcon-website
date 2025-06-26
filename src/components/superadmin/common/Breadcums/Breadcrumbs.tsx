@@ -35,7 +35,7 @@ const formatTitleLabel = (segments: string[]): string => {
 
   if (last === "edit") {
     if (prev === "privacy-policy") return "Privacy Policy";
-    if (prev === "term-condition") return "Terms & Conditions";
+    if (prev === "term-condition") return "Term Condition";
   }
 
   if (segments.includes("organization") && isDynamicSegment(last!)) {
