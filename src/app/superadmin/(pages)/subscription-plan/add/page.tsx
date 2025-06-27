@@ -7,6 +7,7 @@ import { validateForm } from "@/shared/ValidationForm";
 import { subscriptionRules } from "@/shared/ValidationRules";
 import { showToast } from "@/shared/toastUtils";
 import { SuperAdminRoutes } from "@/constant/appRoutes";
+import { DropdownIcon } from "@/svgs";
 
 interface SubscriptionFormData {
   subscription_name: string;
@@ -30,9 +31,9 @@ const AddSubscriptionPage = () => {
     ...(isBasic
       ? {}
       : {
-          subscription_price: "",
-          subscription_validity: "",
-        }),
+        subscription_price: "",
+        subscription_validity: "",
+      }),
     features: [] as string[],
   });
 
@@ -171,9 +172,9 @@ const AddSubscriptionPage = () => {
         ...(isBasic
           ? {}
           : {
-              subscription_price: "",
-              subscription_validity: "",
-            }),
+            subscription_price: "",
+            subscription_validity: "",
+          }),
         features: [],
       });
       setAllFeaturesSelected(false);
@@ -225,6 +226,9 @@ const AddSubscriptionPage = () => {
                     <option value="30">30 Days</option>
                   </select>
                   <label>Duration for this plan</label>
+                  <span className="dropdown-icon">
+                    <DropdownIcon />
+                  </span>
                 </div>
 
                 {errors.subscription_duration && (
