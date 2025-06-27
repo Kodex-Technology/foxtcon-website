@@ -2350,7 +2350,6 @@ export const SubscriptionFeatureIcon = () => {
 
 export const DropdownIcon = () => {
   return (
-
     <svg
       width="17"
       height="9"
@@ -2368,8 +2367,6 @@ export const DropdownIcon = () => {
     </svg>
   );
 };
-
-
 
 export const NoSubscriptionIcon = () => {
   return (
