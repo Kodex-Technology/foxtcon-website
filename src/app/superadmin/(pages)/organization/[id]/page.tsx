@@ -12,9 +12,7 @@ import { organizationDetailActions } from "@/constant/organizationActions";
 import ConfirmationModal from "@/components/superadmin/common/ConfirmationModal/ConfirmationModal";
 import { Modal } from "react-bootstrap";
 import SubscriptionCard from "@/components/superadmin/Subscription/SubcriptionCard/Subscriptioncard";
-import { plans } from "@/constant/organizationFormData";
 import { SuperAdminRoutes } from "@/constant/appRoutes";
-
 
 interface SubscriptionPlan {
   subscription_name: string;
@@ -89,9 +87,9 @@ const OrganizationDetailPage = () => {
     filterStatus === "All"
       ? employeeData
       : employeeData.filter(
-        (org) =>
-          org.employeeType.toLowerCase() === filterStatus.toLowerCase(),
-      );
+          (org) =>
+            org.employeeType.toLowerCase() === filterStatus.toLowerCase(),
+        );
 
   const totalEntries = filteredData.length;
   const startIndex = (currentPage - 1) * rowsPerPage;
@@ -271,7 +269,9 @@ const OrganizationDetailPage = () => {
           <div className="custom-modal-body">
             <SubscriptionCard
               title={"Standard plan"}
-              description={"Set up a balanced plan with moderate pricing and essential features. Best for most organizations"}
+              description={
+                "Set up a balanced plan with moderate pricing and essential features. Best for most organizations"
+              }
               onNavigate={handleNavigate}
               planData={standardPlan}
             />

@@ -9,7 +9,10 @@ import {
   Tooltip,
   TooltipProps,
 } from "recharts";
-import { ValueType, NameType } from "recharts/types/component/DefaultTooltipContent";
+import {
+  ValueType,
+  NameType,
+} from "recharts/types/component/DefaultTooltipContent";
 import "./AverageOrganizationChart.scss";
 
 interface DataItem {
@@ -38,10 +41,14 @@ const AverageOrganizationChart = () => {
 
   const total = data.reduce((sum, entry) => sum + entry.value, 0);
 
-  const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload, coordinate }) => {
+  const CustomTooltip: React.FC<CustomTooltipProps> = ({
+    active,
+    payload,
+    coordinate,
+  }) => {
     if (active && payload && payload.length && coordinate) {
       const value = payload[0].value;
-      const percent = ((value as number) / total * 100).toFixed(0);
+      const percent = (((value as number) / total) * 100).toFixed(0);
       const color = (payload[0].payload as DataItem).color;
 
       return (
