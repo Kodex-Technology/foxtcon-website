@@ -29,9 +29,9 @@ export function middleware(req: NextRequest) {
 
 export const config = {
   matcher: [
-    `${SuperAdminRoutes.ORGANIZATION}/:path*`,
-    `${SuperAdminRoutes.PRIVACY_POLICY}/:path*`,
-    `${SuperAdminRoutes.TERM_CONDITION}/:path*`,
-    `${SuperAdminRoutes.SUBSCRIPTION_PLAN}/:path*`,
+    "/superadmin/organization/:path*",
+    "/superadmin/privacy-policy/:path*",
+    "/superadmin/term-condition/:path*",
+    "/superadmin/subscription-plan/:path*",
   ],
 };

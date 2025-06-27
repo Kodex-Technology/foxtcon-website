@@ -46,7 +46,7 @@ const SgininPage = () => {
       credentials,
       loginValidationRules,
       [],
-      emailFields
+      emailFields,
     );
     setErrors(validationErrors);
     if (Object.keys(validationErrors).length === 0) {

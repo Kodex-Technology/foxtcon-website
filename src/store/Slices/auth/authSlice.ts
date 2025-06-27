@@ -16,7 +16,7 @@ export const login = createAsyncThunk(
   "auth/login",
   async (
     { email, password }: { email: string; password: string },
-    { rejectWithValue }
+    { rejectWithValue },
   ) => {
     try {
       const response = await api.post(API_URLS.AUTH.LOGIN, {
@@ -34,12 +34,12 @@ export const login = createAsyncThunk(
       console.log("err", err);
       if (axios.isAxiosError(err)) {
         return rejectWithValue(
-          err.response?.data?.message || MESSAGES.COMMON.API_ERROR
+          err.response?.data?.message || MESSAGES.COMMON.API_ERROR,
         );
       }
       return rejectWithValue(MESSAGES.COMMON.UNEXPECTED_ERROR);
     }
-  }
+  },
 );
 
 const authSlice = createSlice({
