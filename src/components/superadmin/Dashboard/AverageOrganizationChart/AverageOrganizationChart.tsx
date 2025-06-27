@@ -2,6 +2,8 @@
 import React from "react";
 import { NavigateIcon } from "@/svgs";
 import "./AverageOrganizationChart.scss";
+import { useRouter } from "next/navigation";
+import { SuperAdminRoutes } from "@/constant/appRoutes";
 interface CSSVars extends React.CSSProperties {
   [key: `--${string}`]: string | number;
 }
@@ -10,6 +12,11 @@ interface Props {
 }
 
 const AverageOrganizationChart = ({ value }: Props) => {
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push(SuperAdminRoutes.SUBSCRIPTION_PLAN);
+  };
   const style: CSSVars = {
     "--percentage": value,
     "--fill": "#5C9EFF",
@@ -21,7 +28,7 @@ const AverageOrganizationChart = ({ value }: Props) => {
           <div className="common-title">
             <h2>Organization Plans</h2>
           </div>
-          <button>
+          <button onClick={handleNavigation}>
             <NavigateIcon />
           </button>
         </div>

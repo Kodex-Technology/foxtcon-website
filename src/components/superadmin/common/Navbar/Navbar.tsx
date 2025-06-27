@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Navbar.scss";
 import {
   ChatIcon,
@@ -14,18 +14,29 @@ import { menuItems } from "@/constant/menuItem";
 import Breadcrumbs from "../Breadcums/Breadcrumbs";
 import { useRouter } from "next/navigation";
 import { SuperAdminRoutes } from "@/constant/appRoutes";
-import { useAppSelector } from "@/store/store";
+import { User } from "@/types/auth";
+import Cookies from "js-cookie";
+import { logout } from "@/store/Slices/auth/authSlice";
+import { useAppDispatch } from "@/store/store";
 const Navbar = () => {
   const pathname = usePathname();
   const route = useRouter();
+  const dispatch = useAppDispatch();
   const dropdownRef = useRef<HTMLDivElement>(null);
-  const { user } = useAppSelector((state) => state.auth);
   const [showDropdown, setShowDropdown] = useState(false);
   const [openSidebar, setOpenSidebar] = useState(false);
+  const [user, setUser] = useState<User | null>(null);
+  useEffect(() => {
+    const userData = Cookies.get("user");
+    if (userData) {
+      setUser(JSON.parse(userData));
+    }
+  }, []);
   const toggleDropdown = () => {
     setShowDropdown((prev) => !prev);
   };
   const handleLogout = () => {
+    dispatch(logout());
     route.push(SuperAdminRoutes.SIGNIN);
   };
   const handleNavbarToggle = () => {
@@ -34,6 +45,7 @@ const Navbar = () => {
   const goToChatPage = () => {
     route.push(SuperAdminRoutes.CHAT);
   };
+
   return (
     <>
       <div className="superadmin-topbar">
@@ -53,7 +65,7 @@ const Navbar = () => {
             </div>
             <div className="profile" ref={dropdownRef}>
               <img
-                src={user?.image ?? "images/Unknown_person.jpg"}
+                src={user?.profile_image ?? "/images/Unknown_person.jpg"}
                 alt="icon"
               />
               <h2 className="ellipsis">{user?.name ?? ""}</h2>

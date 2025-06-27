@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import "./MapView.scss";
+import GoogleMapComponent from "@/google/GoogleMapComponent/GoogleMapComponent";
+import { locations } from "@/data/locationData";
 
 const MapView = () => {
   return (
@@ -8,34 +10,20 @@ const MapView = () => {
       <div className="common-title">
         <h2>Map View</h2>
         <p>
-          Showing <span>5</span> branches across 5 States of United States of
-          America...
+          Showing <span>{locations.length}</span> branches across{" "}
+          {locations.length} States of United States of America...
         </p>
       </div>
       <div className="map-box">
-        <img src="/images/map-2.png" alt="map" />
+        <GoogleMapComponent locations={locations} />
       </div>
       <div className="map-legend">
-        <div className="legend-col">
-          <div></div>
-          <span>California</span>
-        </div>
-        <div className="legend-col">
-          <div></div>
-          <span>New York</span>
-        </div>
-        <div className="legend-col">
-          <div></div>
-          <span>Florida</span>
-        </div>
-        <div className="legend-col">
-          <div></div>
-          <span>Texas</span>
-        </div>
-        <div className="legend-col">
-          <div></div>
-          <span>Washington</span>
-        </div>
+        {locations.map((loc, i) => (
+          <div className="legend-col" key={i}>
+            <div></div>
+            <span>{loc.label}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
