@@ -1,5 +1,11 @@
 "use client";
-import React, { useRef, useState, KeyboardEvent, useEffect } from "react";
+import React, {
+  useRef,
+  useState,
+  KeyboardEvent,
+  useEffect,
+  useCallback,
+} from "react";
 import "./page.scss";
 import { chatData } from "@/data/chatData";
 import ChatHeader from "@/components/superadmin/Chat/ChatHeader/ChatHeader";
@@ -40,7 +46,7 @@ const ChatPage = () => {
     if (updated.length === 0) setShowFilePreview(false);
   };
 
-  const handleSendMessage = () => {
+  const handleSendMessage = useCallback(() => {
     if (!newMessage.trim() && selectedFiles.length === 0) return;
 
     const now = new Date();
@@ -67,7 +73,7 @@ const ChatPage = () => {
     setSelectedFiles([]);
     setShowFilePreview(false);
     if (fileInputRef.current) fileInputRef.current.value = "";
-  };
+  }, [newMessage, selectedFiles, selectedUser]);
   const handleKeyDown = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();

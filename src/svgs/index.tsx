@@ -2780,3 +2780,10 @@ export const NoSubscriptionIcon = () => {
     </svg>
   );
 };
+
+export const googleMapPinDataUri = `data:image/svg+xml;utf-8,${encodeURIComponent(`
+  <svg width="35" height="36" viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="17.314" cy="18.0295" r="17.1765" fill="#D6E3FF" />
+    <circle cx="17.3135" cy="18.0281" r="11.451" fill="#0E53E2" />
+  </svg>
+  `)}`;
