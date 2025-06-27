@@ -1,3 +1,7 @@
+export const loginValidationRules = {
+  email: "Email is required",
+  password: "Password is required",
+};
 export const step1Rules = {
   organization_name: "Organization name is required",
   organization_email: "Organization email is required",
