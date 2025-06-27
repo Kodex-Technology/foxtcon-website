@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useEffect, useState } from "react";
 import "./page.scss";
 import { useRouter } from "next/navigation";
@@ -7,23 +7,40 @@ import SubscriptionCard from "@/components/superadmin/Subscription/SubcriptionCa
 import { plans } from "@/constant/subscriptionData";
 import { NoSubscriptionIcon } from "@/svgs";
 
+interface SubscriptionPlan {
+  subscription_name: string;
+  subscription_price: string;
+  subscription_duration: string;
+  subscription_validity: string;
+  subscription_description: string;
+  features: string[];
+}
+
 const SubscriptionPage = () => {
   const router = useRouter();
 
-  const [basicPlan, setBasicPlan] = useState<any>(null);
-  const [standardPlan, setStandardPlan] = useState<any>(null);
-  const [premiumPlan, setPremiumPlan] = useState<any>(null);
-  const [customPlan, setCustomPlan] = useState<any>(null);
+  const [basicPlan, setBasicPlan] = useState<SubscriptionPlan | undefined>(
+    undefined,
+  );
+  const [standardPlan, setStandardPlan] = useState<
+    SubscriptionPlan | undefined
+  >(undefined);
+  const [premiumPlan, setPremiumPlan] = useState<SubscriptionPlan | undefined>(
+    undefined,
+  );
+  const [customPlan, setCustomPlan] = useState<SubscriptionPlan | undefined>(
+    undefined,
+  );
 
   const handleNavigate = (planType: string) => {
     router.push(`${SuperAdminRoutes.SUBSCRIPTION_PLAN_ADD}?type=${planType}`);
   };
 
   useEffect(() => {
-    const basic = localStorage.getItem('basic_plan');
-    const standard = localStorage.getItem('standard_plan');
-    const premium = localStorage.getItem('premium_plan');
-    const custom = localStorage.getItem('custom_plan');
+    const basic = localStorage.getItem("basic_plan");
+    const standard = localStorage.getItem("standard_plan");
+    const premium = localStorage.getItem("premium_plan");
+    const custom = localStorage.getItem("custom_plan");
 
     if (basic) setBasicPlan(JSON.parse(basic));
     if (standard) setStandardPlan(JSON.parse(standard));
@@ -76,6 +93,7 @@ const SubscriptionPage = () => {
             </div>
           </div>
         </div>
+
         {!basicPlan && !standardPlan && !premiumPlan && !customPlan && (
           <div className="no-data-available">
             <NoSubscriptionIcon />

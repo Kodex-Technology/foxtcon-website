@@ -82,26 +82,29 @@ export const featuresList = [
   },
 ];
 
- export const plans = [
-    {
-      type: "basic",
-      title: "Basic plan",
-      description: "Start with a minimal offering. Use this plan to define basic level features for small teams or trial users"
-    },
-    {
-      type: "standard",
-      title: "Standard Plan",
-      description: "Set up a balanced plan with moderate pricing and essential features. Best for most organizations"
-    },
-    {
-      type: "premium",
-      title: "Premium Plan",
-      description: "Add advanced features and premium pricing here. Ideal for large-scale or high-priority clients."
-    },
-    {
-      type: "custom",
-      title: "Custom Plan",
-      description: "Start with a minimal offering. Use this plan to define basic level features for small teams or trial users"
-    }
-  ];
-
+export const plans = [
+  {
+    type: "basic",
+    title: "Basic plan",
+    description:
+      "Start with a minimal offering. Use this plan to define basic level features for small teams or trial users",
+  },
+  {
+    type: "standard",
+    title: "Standard Plan",
+    description:
+      "Set up a balanced plan with moderate pricing and essential features. Best for most organizations",
+  },
+  {
+    type: "premium",
+    title: "Premium Plan",
+    description:
+      "Add advanced features and premium pricing here. Ideal for large-scale or high-priority clients.",
+  },
+  {
+    type: "custom",
+    title: "Custom Plan",
+    description:
+      "Start with a minimal offering. Use this plan to define basic level features for small teams or trial users",
+  },
+];
