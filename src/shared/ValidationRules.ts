@@ -23,3 +23,11 @@ export const step5Rules = {
 
 export const step1EmailFields = ["organization_email"];
 export const step1NumberFields: string[] = [];
+
+export const subscriptionRules = {
+  subscription_name: "Plan name is required",
+  subscription_duration: "Duration is required",
+  subscription_price: "Price is required",
+  subscription_description: "description is required",
+  features: "Please select at least one feature",
+};
