@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DotsIcon, NoDataIcon, CloseIcon } from "@/svgs";
 import "./page.scss";
 import Table from "react-bootstrap/Table";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import { employeeData } from "@/data/employeeData";
 import PaginationControl from "@/components/superadmin/common/Pagination/PaginationControl";
 import OrganizationFilter from "@/components/superadmin/Organization/OrganizationFilter/OrganizationFilter";
@@ -11,9 +11,21 @@ import ActionMenu from "@/components/superadmin/common/ActionMenu/ActionMenu";
 import { organizationDetailActions } from "@/constant/organizationActions";
 import ConfirmationModal from "@/components/superadmin/common/ConfirmationModal/ConfirmationModal";
 import { Modal } from "react-bootstrap";
+import SubscriptionCard from "@/components/superadmin/Subscription/SubcriptionCard/Subscriptioncard";
+import { SuperAdminRoutes } from "@/constant/appRoutes";
+
+interface SubscriptionPlan {
+  subscription_name: string;
+  subscription_price: string;
+  subscription_duration: string;
+  subscription_validity: string;
+  subscription_description: string;
+  features: string[];
+}
 
 const OrganizationDetailPage = () => {
   const params = useParams();
+  const router = useRouter();
   const organizationId = Number(params.id);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [filterStatus, setFilterStatus] = useState("All");
@@ -31,6 +43,19 @@ const OrganizationDetailPage = () => {
       setShowConfirmationModal(true);
     }
   };
+
+  const [standardPlan, setStandardPlan] = useState<
+    SubscriptionPlan | undefined
+  >(undefined);
+
+  const handleNavigate = (planType: string) => {
+    router.push(`${SuperAdminRoutes.SUBSCRIPTION_PLAN_ADD}?type=${planType}`);
+  };
+
+  useEffect(() => {
+    const standard = localStorage.getItem("standard_plan");
+    if (standard) setStandardPlan(JSON.parse(standard));
+  }, []);
 
   const handleConfirmAction = () => {
     if (!selectedAction) return;
@@ -242,7 +267,14 @@ const OrganizationDetailPage = () => {
             </button>
           </div>
           <div className="custom-modal-body">
-            <p>Plan Detail</p>
+            <SubscriptionCard
+              title={"Standard plan"}
+              description={
+                "Set up a balanced plan with moderate pricing and essential features. Best for most organizations"
+              }
+              onNavigate={handleNavigate}
+              planData={standardPlan}
+            />
           </div>
         </Modal.Body>
       </Modal>
