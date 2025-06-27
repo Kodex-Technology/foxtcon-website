@@ -2348,6 +2348,29 @@ export const SubscriptionFeatureIcon = () => {
   );
 };
 
+export const DropdownIcon = () => {
+  return (
+
+    <svg
+      width="17"
+      height="9"
+      viewBox="0 0 17 9"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M15.667 1L8.66699 8L1.66699 1"
+        stroke="#555555"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+
+
 export const NoSubscriptionIcon = () => {
   return (
     <svg
