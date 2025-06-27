@@ -87,9 +87,9 @@ const OrganizationDetailPage = () => {
     filterStatus === "All"
       ? employeeData
       : employeeData.filter(
-          (org) =>
-            org.employeeType.toLowerCase() === filterStatus.toLowerCase(),
-        );
+        (org) =>
+          org.employeeType.toLowerCase() === filterStatus.toLowerCase(),
+      );
 
   const totalEntries = filteredData.length;
   const startIndex = (currentPage - 1) * rowsPerPage;

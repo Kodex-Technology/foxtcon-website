@@ -31,9 +31,9 @@ const AddSubscriptionPage = () => {
     ...(isBasic
       ? {}
       : {
-          subscription_price: "",
-          subscription_validity: "",
-        }),
+        subscription_price: "",
+        subscription_validity: "",
+      }),
     features: [] as string[],
   });
 
@@ -172,9 +172,9 @@ const AddSubscriptionPage = () => {
         ...(isBasic
           ? {}
           : {
-              subscription_price: "",
-              subscription_validity: "",
-            }),
+            subscription_price: "",
+            subscription_validity: "",
+          }),
         features: [],
       });
       setAllFeaturesSelected(false);
